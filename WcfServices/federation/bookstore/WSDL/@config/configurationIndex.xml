@@ -1,0 +1,12 @@
+<configurationMapping>
+  <service uniqueName="BookStoreService">
+    <port name="*">
+      <configPath>BookStor.stss</configPath>
+    </port>
+  </service>
+  <service uniqueName="BookStoreService1">
+    <port name="*">
+      <configPath>BookStor2.stss</configPath>
+    </port>
+  </service>
+</configurationMapping>

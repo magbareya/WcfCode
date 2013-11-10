@@ -1,0 +1,202 @@
+﻿<?xml version="1.0"?>
+  <!DOCTYPE Report
+[
+<!ELEMENT Report (General ,(Doc|BPT)) >
+<!ATTLIST Report ver CDATA #REQUIRED tmZone CDATA #REQUIRED>
+
+<!ELEMENT General ( DocLocation ) >
+<!ATTLIST General productName CDATA #REQUIRED productVer CDATA #REQUIRED os CDATA #REQUIRED host CDATA #REQUIRED>
+
+<!ELEMENT BPT (DName,Res,DVer?,TSet?,TInst?,NodeArgs,Doc*) >
+<!ATTLIST BPT rID ID #REQUIRED >
+
+<!ELEMENT Doc (DName, Res, DVer?, TSet?, TInst?, RunType?, DT?, Step*, Action+, DIter*, Action*, Summary?, NodeArgs?)> 
+<!ATTLIST Doc rID ID #REQUIRED type (Test|BC) "Test" productName CDATA #REQUIRED BCIter CDATA #IMPLIED >
+
+<!ELEMENT RunType ( #PCDATA )>
+<!ATTLIST RunType fmStep (False|True) "False" batch (False|True) "False" upDesc (False|True) "False" upChk (False|True) "False" upAS (False|True) "False">
+
+<!ELEMENT DName ( #PCDATA ) >
+
+<!ELEMENT Res ( #PCDATA ) >
+
+<!ELEMENT DVer ( #PCDATA ) >
+
+<!ELEMENT TSet ( #PCDATA ) >
+
+<!ELEMENT TInst ( #PCDATA ) >
+
+<!ELEMENT DIter (Step?,Action+,Summary?,NodeArgs)>
+<!ATTLIST DIter rID ID #REQUIRED iterID CDATA #REQUIRED>
+
+<!ELEMENT DocLocation ( #PCDATA )>
+
+<!ELEMENT Action (AName,AIter*,(Step|HtmlStep|Action)*,Summary,NodeArgs) >
+<!ATTLIST Action rID ID #REQUIRED>
+
+<!ELEMENT AIter ((Step|HtmlStep|Action)*,Summary?,NodeArgs) >
+<!ATTLIST AIter rID ID #REQUIRED iterID CDATA #REQUIRED>
+
+<!ELEMENT AName ( #PCDATA ) >
+
+<!ELEMENT Step (Obj,Details,Time,(Step|HtmlStep|Doc)*,NodeArgs) >
+<!ATTLIST Step rID ID #REQUIRED retval CDATA #IMPLIED>
+
+<!ELEMENT HtmlStep (HTML,(Step|HtmlStep|Doc)*,NodeArgs) >
+<!ATTLIST HtmlStep rID ID #REQUIRED >
+
+<!ELEMENT Obj ( #PCDATA ) >
+<!ATTLIST Obj plainTxt (False|True) "True">
+
+<!ELEMENT Details ( #PCDATA ) >
+<!ATTLIST Details plainTxt (False|True) "True">
+
+<!ELEMENT Time ( #PCDATA ) >
+
+<!ELEMENT HTML ( #PCDATA ) >
+
+<!ELEMENT Disp ( #PCDATA ) >
+
+<!ELEMENT NodeArgs (Disp,TopPane?,BtmPane?)>
+<!ATTLIST NodeArgs eType CDATA #REQUIRED icon CDATA #REQUIRED nRep CDATA #REQUIRED filter (False|True) "True">
+<!ATTLIST NodeArgs status (Passed|Failed|Done|Warning|Information) "Done">
+<!ATTLIST NodeArgs iconSel CDATA #IMPLIED nType CDATA #IMPLIED >
+
+<!ELEMENT TopPane (Path)>
+
+<!ELEMENT BtmPane ( (Path|WR)?,ASHilite?)>
+<!ATTLIST BtmPane vType CDATA "HTML">
+
+<!ELEMENT Path ( #PCDATA ) >
+
+<!ELEMENT ASHilite ( #PCDATA ) >
+
+<!ELEMENT WR ( #PCDATA ) >
+
+<!ELEMENT DT (NodeArgs) >
+<!ATTLIST DT rID ID #REQUIRED>
+
+<!ELEMENT Summary (Param*)>
+<!ATTLIST Summary sTime CDATA #IMPLIED eTime CDATA #IMPLIED passed CDATA #IMPLIED failed CDATA #IMPLIED warnings CDATA #IMPLIED retval CDATA #IMPLIED stopped (False|True) "False" >
+
+<!ELEMENT Param (ParamName,ParamVal)+ >
+<!ATTLIST Param paramInOut (In|Out) "In">
+
+<!ELEMENT ParamName ( #PCDATA ) >
+
+<!ELEMENT ParamVal ( #PCDATA ) >
+
+]
+> <Report ver="2.0" tmZone="Jerusalem Standard Time">
+<General productName="Vugen" productVer="9" os="" host="NAVEH05"><DocLocation><![CDATA[\\naveh05\PC COE (C)\examples\ST usage\st_wcf\scripts\federation\bookstore]]></DocLocation></General>
+<Doc rID="T1"   productName= "Vugen"  >
+<DName><![CDATA[bookstore]]></DName>
+<Res><![CDATA[result1]]></Res>
+<Action rID="T2">
+<AName><![CDATA[vuser_init]]></AName>
+<Summary sTime="27/04/2009 - 13:14:08" eTime="27/04/2009 - 13:14:09" passed="0" failed="0" warnings="0" ></Summary>
+<NodeArgs eType="StartAction" icon="2" nRep="5" >
+<Disp><![CDATA[vuser_init Summary]]></Disp>
+</NodeArgs>
+</Action>
+<DIter rID="T3" iterID="1" >
+<Action rID="T4">
+<AName><![CDATA[Action]]></AName>
+<Step rID="T5">
+<Obj plainTxt="False" ><![CDATA[BrowseBooks_101]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Web service call was successful</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[27/04/2009 - 13:14:18]]></Time>
+<Step rID="T6">
+<Obj plainTxt="False" ><![CDATA[HTTP Traffic]]></Obj>
+<Details plainTxt="False" ><![CDATA[DB Connection "0ת" started ... Wait ....]]></Details>
+<Time><![CDATA[27/04/2009 - 13:14:18]]></Time>
+<NodeArgs eType="General" icon="4" nRep="10" >
+<Disp><![CDATA[HTTP Traffic]]></Disp>
+<BtmPane vType="HTMLSNSH">
+<Path><![CDATA[\Iteration1\t1234798491_http.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<NodeArgs eType="General" icon="4" nRep="9" status="Passed" >
+<Disp><![CDATA[BrowseBooks_101]]></Disp>
+<BtmPane vType="HTMLSNSH">
+<Path><![CDATA[\Iteration1\t0_web_service_call.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T7">
+<Obj plainTxt="False" ><![CDATA[BuyBook_101]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Web service call was successful</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[27/04/2009 - 13:14:24]]></Time>
+<Step rID="T8">
+<Obj plainTxt="False" ><![CDATA[HTTP Traffic]]></Obj>
+<Details plainTxt="False" ><![CDATA[DB Connection " ת" started ... Wait ....]]></Details>
+<Time><![CDATA[27/04/2009 - 13:14:24]]></Time>
+<NodeArgs eType="General" icon="4" nRep="12" >
+<Disp><![CDATA[HTTP Traffic]]></Disp>
+<BtmPane vType="HTMLSNSH">
+<Path><![CDATA[\Iteration1\t1234798950_http.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<NodeArgs eType="General" icon="4" nRep="11" status="Passed" >
+<Disp><![CDATA[BuyBook_101]]></Disp>
+<BtmPane vType="HTMLSNSH">
+<Path><![CDATA[\Iteration1\t1234798491_web_service_call.inf]]></Path>
+</BtmPane>
+</NodeArgs>
+</Step>
+<Step rID="T9">
+<Obj plainTxt="False" ><![CDATA[BuyBook_101]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Web service call was successful</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[27/04/2009 - 13:14:24]]></Time>
+<Step rID="T10">
+<Obj plainTxt="False" ><![CDATA[HTTP Traffic]]></Obj>
+<Details plainTxt="False" ><![CDATA[DB Connection " ת" started ... Wait ....]]></Details>
+<Time><![CDATA[27/04/2009 - 13:14:24]]></Time>
+<NodeArgs eType="General" icon="4" nRep="14" >
+<Disp><![CDATA[HTTP Traffic]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="General" icon="4" nRep="13" status="Passed" >
+<Disp><![CDATA[BuyBook_101]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T11">
+<Obj plainTxt="False" ><![CDATA[BuyBook_101]]></Obj>
+<Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Web service call was successful</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[27/04/2009 - 13:14:24]]></Time>
+<Step rID="T12">
+<Obj plainTxt="False" ><![CDATA[HTTP Traffic]]></Obj>
+<Details plainTxt="False" ><![CDATA[DB Connection " ת" started ... Wait ....]]></Details>
+<Time><![CDATA[27/04/2009 - 13:14:24]]></Time>
+<NodeArgs eType="General" icon="4" nRep="16" >
+<Disp><![CDATA[HTTP Traffic]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="General" icon="4" nRep="15" status="Passed" >
+<Disp><![CDATA[BuyBook_101]]></Disp>
+</NodeArgs>
+</Step>
+<Summary sTime="27/04/2009 - 13:14:09" eTime="27/04/2009 - 13:14:24" passed="4" failed="0" warnings="0" ></Summary>
+<NodeArgs eType="StartAction" icon="2" nRep="8" status="Passed" >
+<Disp><![CDATA[Action Summary]]></Disp>
+</NodeArgs>
+</Action>
+<NodeArgs eType="StartIteration" icon="3" nRep="7" status="Passed" >
+<Disp><![CDATA[bookstore Iteration 1 (Row 1)]]></Disp>
+</NodeArgs>
+</DIter>
+<Action rID="T13">
+<AName><![CDATA[vuser_end]]></AName>
+<Summary sTime="27/04/2009 - 13:14:24" eTime="27/04/2009 - 13:14:24" passed="0" failed="0" warnings="0" ></Summary>
+<NodeArgs eType="StartAction" icon="2" nRep="19" >
+<Disp><![CDATA[vuser_end Summary]]></Disp>
+</NodeArgs>
+</Action>
+<Summary sTime="27/04/2009 - 13:14:07" eTime="27/04/2009 - 13:14:24" passed="4" failed="0" warnings="0" ></Summary>
+<NodeArgs eType="StartTest" icon="1" nRep="4" status="Passed" >
+<Disp><![CDATA[Test bookstore Summary]]></Disp>
+</NodeArgs>
+</Doc>
+</Report>

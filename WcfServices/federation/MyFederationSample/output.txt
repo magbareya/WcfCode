@@ -1,0 +1,114 @@
+Virtual User Script started at : 7/19/2012 4:15:16 PM
+Starting action vuser_init.
+Web Services replay version 11.50.0 for Windows 7; Toolkit: ".Net"; build 2216
+Run-Time Settings file: "C:\Mahmoud\Work\AppsWorthToSave\WCF-Services\federation\MyFederationSample\\default.cfg"
+Vuser directory: "C:\Mahmoud\Work\AppsWorthToSave\WCF-Services\federation\MyFederationSample"
+Vuser output directory: "C:\Mahmoud\Work\AppsWorthToSave\WCF-Services\federation\MyFederationSample\"
+LOCAL start date/time:  2012-07-19 16:15:17
+Ending action vuser_init.
+Running Vuser...
+Starting iteration 1.
+Notify: max connections per server : 2
+Starting action Action.
+Action.c(4): Web service call "GetWeather_101" started
+Action.c(4): Creating handler
+Action.c(4): Searching for wcf router
+Action.c(4): Preparing router
+Action.c(4): POST http://localhost:9090/service
+Action.c(4): SOAPAction: http://tempuri.org/IForacstService/GetWeather
+Action.c(4): Request Body:
+
+<?xml version="1.0" encoding="utf-16"?>
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/03/addressing">
+  <soap:Header>
+    <Action soap:mustUnderstand="1" xmlns="http://www.w3.org/2005/08/addressing">http://tempuri.org/IForacstService/GetWeather</Action>
+    <To soap:mustUnderstand="1" xmlns="http://www.w3.org/2005/08/addressing">http://localhost:9090/service</To>
+  </soap:Header>
+  <soap:Body>
+    <GetWeather xmlns="http://tempuri.org/">
+      <city>NY</city>
+    </GetWeather>
+  </soap:Body>
+</soap:Envelope>
+
+
+Action.c(4): Sending request
+Action.c(4): Received response
+Action.c(4): Response Headers:
+
+Action.c(4): Content-Length:5341
+Action.c(4): Content-Type:application/soap+xml; charset=utf-8
+Action.c(4): Date:Thu, 19 Jul 2012 13:15:22 GMT
+Action.c(4): Server:Microsoft-HTTPAPI/2.0
+Action.c(4): 
+
+Action.c(4): Response Body:
+
+<?xml version="1.0" encoding="utf-16"?>
+<s:Envelope xmlns:s="http://www.w3.org/2003/05/soap-envelope" xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:u="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+  <s:Header>
+    <a:Action s:mustUnderstand="1" u:Id="_2">http://tempuri.org/IForacstService/GetWeatherResponse</a:Action>
+    <ActivityId CorrelationId="b2a1d0d4-dd1d-42a2-9808-5d901bfa7664" xmlns="http://schemas.microsoft.com/2004/09/ServiceModel/Diagnostics">06eb086c-a1fe-4156-8132-884e8e4e3215</ActivityId>
+    <a:RelatesTo u:Id="_3">urn:uuid:aa8a877f-2eb9-4181-9d8f-b5d9f47c488d</a:RelatesTo>
+    <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">
+      <u:Timestamp u:Id="uuid-4192a722-305d-47bf-b33f-71ca4faee469-11">
+        <u:Created>2012-07-19T13:15:22.561Z</u:Created>
+        <u:Expires>2012-07-19T13:20:22.561Z</u:Expires>
+      </u:Timestamp>
+      <c:DerivedKeyToken u:Id="uuid-4192a722-305d-47bf-b33f-71ca4faee469-7" xmlns:c="http://schemas.xmlsoap.org/ws/2005/02/sc">
+        <o:SecurityTokenReference>
+          <o:Reference URI="urn:uuid:0bc6fe70-5c39-4659-ac04-9aed2f7a11ad" ValueType="http://schemas.xmlsoap.org/ws/2005/02/sc/sct">
+          </o:Reference>
+        </o:SecurityTokenReference>
+        <c:Offset>0</c:Offset>
+        <c:Length>24</c:Length>
+        <c:Nonce>v/IMMTso3f61+JvX8o8aMA==</c:Nonce>
+      </c:DerivedKeyToken>
+      <c:DerivedKeyToken u:Id="uuid-4192a722-305d-47bf-b33f-71ca4faee469-8" xmlns:c="http://schemas.xmlsoap.org/ws/2005/02/sc">
+        <o:SecurityTokenReference>
+          <o:Reference URI="urn:uuid:0bc6fe70-5c39-4659-ac04-9aed2f7a11ad" ValueType="http://schemas.xmlsoap.org/ws/2005/02/sc/sct">
+          </o:Reference>
+        </o:SecurityTokenReference>
+        <c:Nonce>29knFsXzGM5iNrvjCtGA3A==</c:Nonce>
+      </c:DerivedKeyToken>
+      <e:ReferenceList xmlns:e="http://www.w3.org/2001/04/xmlenc#">
+        <e:DataReference URI="#_1">
+        </e:DataReference>
+        <e:DataReference URI="#_4">
+        </e:DataReference>
+      </e:ReferenceList>
+      <e:EncryptedData Id="_4" Type="http://www.w3.org/2001/04/xmlenc#Element" xmlns:e="http://www.w3.org/2001/04/xmlenc#">
+        <e:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes256-cbc">
+        </e:EncryptionMethod>
+        <KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+          <o:SecurityTokenReference>
+            <o:Reference URI="#uuid-4192a722-305d-47bf-b33f-71ca4faee469-8">
+            </o:Reference>
+          </o:SecurityTokenReference>
+        </KeyInfo>
+        <e:CipherData>
+          <e:CipherValue>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</e:CipherValue>
+        </e:CipherData>
+      </e:EncryptedData>
+    </o:Security>
+  </s:Header>
+  <s:Body u:Id="_0">
+    <GetWeatherResponse xmlns="http://tempuri.org/">
+      <GetWeatherResult xmlns:a="http://schemas.datacontract.org/2004/07/WeatherChannel" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+        <a:Forcast>Cloudy</a:Forcast>
+        <a:Temperature>25</a:Temperature>
+      </GetWeatherResult>
+    </GetWeatherResponse>
+  </s:Body>
+</s:Envelope>
+
+Action.c(4): After saving response
+Action.c(4): Notify: Saving Parameter "GetWeather_101_Response = <GetWeather><GetWeatherResult><Forcast>Cloudy</Forcast><Temperature>25</Temperature></GetWeatherResult></GetWeather>".
+Action.c(4): Notify: Saving Parameter "response = <s:Envelope xmlns:s="http://www.w3.org/2003/05/soap-envelope" xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:u="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">\r\n  <s:Header />\r\n  <s:Body u:Id="_0">\r\n    <GetWeatherResponse xmlns="http://tempuri.org/">\r\n      <GetWeatherResult xmlns:a="http://schemas.datacontract.org/2004/07/WeatherChannel" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">\r\n        <a:Forcast>Cloudy</a:Forcast>\r\n        <a:Temperature>25</a:Temperature>\r\n      </GetWeatherResult>\r\n    </GetWeatherResponse>\r\n  </s:Body>\r\n</s:Envelope>".
+Action.c(4): Web service call "GetWeather_101" was successful
+Ending action Action.
+Ending iteration 1.
+Ending Vuser...
+Starting action vuser_end.
+Ending action vuser_end.
+Vuser Terminated.

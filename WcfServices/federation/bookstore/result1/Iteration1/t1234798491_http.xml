@@ -1,0 +1,35 @@
+<?xml-stylesheet href="..\http.xsl" type="text/xsl"?>
+<report vuGenInstallDir="C:\Program Files\HP\LoadRunner">
+  <http>
+    <request>
+      <body>&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/03/addressing"&gt;
+  &lt;soap:Header&gt;
+    &lt;wsa:Action&gt;http://tempuri.org/IBrowseBooks/BrowseBooks&lt;/wsa:Action&gt;
+    &lt;wsa:MessageID&gt;uuid:27be1613-a7d6-49fd-a962-9c23476d9f20&lt;/wsa:MessageID&gt;
+    &lt;wsa:ReplyTo&gt;
+      &lt;wsa:Address&gt;http://schemas.xmlsoap.org/ws/2004/03/addressing/role/anonymous&lt;/wsa:Address&gt;
+    &lt;/wsa:ReplyTo&gt;
+    &lt;wsa:To&gt;http://naveh05.emea.hpqcorp.net/FederationSample/BookStoreService/store.svc/browse&lt;/wsa:To&gt;
+  &lt;/soap:Header&gt;
+  &lt;soap:Body&gt;
+    &lt;BrowseBooks xmlns="http://tempuri.org/" /&gt;
+  &lt;/soap:Body&gt;
+&lt;/soap:Envelope&gt;</body>
+    </request>
+    <response>
+      <body>&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/" xmlns:a="http://www.w3.org/2005/08/addressing"&gt;
+  &lt;s:Body&gt;
+    &lt;BrowseBooksResponse xmlns="http://tempuri.org/"&gt;
+      &lt;BrowseBooksResult xmlns:b="http://schemas.microsoft.com/2003/10/Serialization/Arrays" xmlns:i="http://www.w3.org/2001/XMLSchema-instance"&gt;
+        &lt;b:string&gt;1.  Book Title One,  Jay Hamlin,  $18&lt;/b:string&gt;
+        &lt;b:string&gt;2.  Book Title Two,  Alan Brewer,  $15&lt;/b:string&gt;
+        &lt;b:string&gt;3.  Book Title Three,  Billie Jo Murray,  $14&lt;/b:string&gt;
+      &lt;/BrowseBooksResult&gt;
+    &lt;/BrowseBooksResponse&gt;
+  &lt;/s:Body&gt;
+&lt;/s:Envelope&gt;</body>
+    </response>
+  </http>
+</report>

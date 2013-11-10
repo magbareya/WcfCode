@@ -1,0 +1,7 @@
+<configurationMapping>
+  <service uniqueName="ForacstService">
+    <port name="*">
+      <configPath>ForacstS.stss</configPath>
+    </port>
+  </service>
+</configurationMapping>

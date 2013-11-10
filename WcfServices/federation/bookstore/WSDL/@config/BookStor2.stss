@@ -1,0 +1,54 @@
+<protocols scenario="customBinding" uiType="WSFederationBinding" xmlns="http://hp/ServiceTest/config">
+  <mode>Private</mode>
+  <customization>
+    <textMessageEncoding />
+    <security authenticationMode="SecureConversation">
+      <secureConversationBootstrap authenticationMode="IssuedTokenForSslNegotiated">
+        <issuedTokenParameters tokenType="http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLV1.1">
+          <issuer address="http://localhost/FederationSample/BookStoreSTS/STS.svc" protocolsScenarioName="BookStor2" />
+        </issuedTokenParameters>
+      </secureConversationBootstrap>
+    </security>
+    <httpTransport />
+  </customization>
+  <identities>
+    <server>
+      <expectedDns>BookStoreService.com</expectedDns>
+    </server>
+  </identities>
+  <referencedConfigurations>
+    <protocols scenario="customBinding" uiType="WSFederationBinding" xmlns="http://hp/ServiceTest/config">
+      <mode>Private</mode>
+      <customization>
+        <textMessageEncoding />
+        <security authenticationMode="SecureConversation">
+          <secureConversationBootstrap authenticationMode="IssuedTokenForSslNegotiated">
+            <issuedTokenParameters tokenType="http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLV1.1">
+              <issuer address="http://localhost/FederationSample/HomeRealmSTS/STS.svc" protocolsScenarioName="BookStoreSTS" />
+            </issuedTokenParameters>
+          </secureConversationBootstrap>
+        </security>
+        <httpTransport />
+      </customization>
+      <identities>
+        <server>
+          <expectedDns>BookStoreSTS.com</expectedDns>
+        </server>
+      </identities>
+      <referencedConfigurations>
+        <protocols scenario="wsHttpSPNego" uiType="wsHttpBindingWindows" xmlns="http://hp/ServiceTest/config">
+          <mode>Private</mode>
+          <customization />
+          <identities>
+            <server>
+              <expectedSPN>localhost</expectedSPN>
+            </server>
+            <client />
+          </identities>
+        </protocols>
+        <filePath>C:\Documents and Settings\naveh\Local Settings\Temp\noname484\WSDL\@config\HomeSTS.stss</filePath>
+      </referencedConfigurations>
+    </protocols>
+    <filePath>C:\Documents and Settings\naveh\Local Settings\Temp\noname484\WSDL\@config\BookStoreSTS.stss</filePath>
+  </referencedConfigurations>
+</protocols>

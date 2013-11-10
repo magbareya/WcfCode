@@ -1,0 +1,12 @@
+<?xml-stylesheet href="..\web_service_call.xsl" type="text/xsl"?>
+<report vuGenInstallDir="C:\Program Files (x86)\HP\LoadRunner\">
+  <web_service_call>
+    <service name="ForacstService" />
+    <port name="CustomBinding_IForacstService" />
+    <operation name="GetWeather" />
+    <wsdl location="http://naveh05:9090/service?WSDL" />
+    <address url="http://localhost:9090/service" />
+    <toolkit name=".Net" />
+    <aspect name="Positive Testing" />
+  </web_service_call>
+</report>

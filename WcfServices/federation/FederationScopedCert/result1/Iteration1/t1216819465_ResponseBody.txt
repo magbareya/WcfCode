@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?><s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/" xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:u="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+  
+  <s:Body u:Id="_0">
+    <AddResponse xmlns="http://Neeman.Samples">
+      <AddResult>33</AddResult>
+    </AddResponse>
+  </s:Body>
+</s:Envelope>

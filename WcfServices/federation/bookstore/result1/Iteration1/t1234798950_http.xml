@@ -1,0 +1,34 @@
+<?xml-stylesheet href="..\http.xsl" type="text/xsl"?>
+<report vuGenInstallDir="C:\Program Files\HP\LoadRunner">
+  <http>
+    <request>
+      <body>&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/03/addressing"&gt;
+  &lt;soap:Header&gt;
+    &lt;wsa:Action&gt;http://tempuri.org/IBuyBook/BuyBook&lt;/wsa:Action&gt;
+    &lt;wsa:MessageID&gt;uuid:abe59974-7df8-44a5-b32e-900b8f640991&lt;/wsa:MessageID&gt;
+    &lt;wsa:ReplyTo&gt;
+      &lt;wsa:Address&gt;http://schemas.xmlsoap.org/ws/2004/03/addressing/role/anonymous&lt;/wsa:Address&gt;
+    &lt;/wsa:ReplyTo&gt;
+    &lt;wsa:To&gt;http://naveh05.emea.hpqcorp.net/FederationSample/BookStoreService/store.svc/buy&lt;/wsa:To&gt;
+  &lt;/soap:Header&gt;
+  &lt;soap:Body&gt;
+    &lt;BuyBook xmlns="http://tempuri.org/"&gt;
+      &lt;emailAddress&gt;abcde&lt;/emailAddress&gt;
+      &lt;shipAddress&gt;abcde&lt;/shipAddress&gt;
+    &lt;/BuyBook&gt;
+  &lt;/soap:Body&gt;
+&lt;/soap:Envelope&gt;</body>
+    </request>
+    <response>
+      <body>&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/" xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:u="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"&gt;
+  &lt;s:Body u:Id="_0"&gt;
+    &lt;BuyBookResponse xmlns="http://tempuri.org/"&gt;
+      &lt;BuyBookResult&gt;EMEA\naveh, the purchase of book Book Title Two has been approved. The details of shipping date and confirmation receipt will be mailed to abcde shortly&lt;/BuyBookResult&gt;
+    &lt;/BuyBookResponse&gt;
+  &lt;/s:Body&gt;
+&lt;/s:Envelope&gt;</body>
+    </response>
+  </http>
+</report>

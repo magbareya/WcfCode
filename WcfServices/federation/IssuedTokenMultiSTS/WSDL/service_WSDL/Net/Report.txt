@@ -1,0 +1,4 @@
+Warning: The optional WSDL extension element 'PolicyReference' from namespace 'http://schemas.xmlsoap.org/ws/2004/09/policy' was not handled.
+Warning: The optional WSDL extension element 'PolicyReference' from namespace 'http://schemas.xmlsoap.org/ws/2004/09/policy' was not handled.
+Warning: The optional WSDL extension element 'PolicyReference' from namespace 'http://schemas.xmlsoap.org/ws/2004/09/policy' was not handled.
+Warning: The optional WSDL extension element 'EndpointReference' from namespace 'http://www.w3.org/2005/08/addressing' was not handled.

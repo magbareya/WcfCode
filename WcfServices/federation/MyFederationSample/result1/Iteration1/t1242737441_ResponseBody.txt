@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?><s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/" xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:u="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+  
+  <s:Body u:Id="_0">
+    <GetWeatherResponse xmlns="http://tempuri.org/">
+      <GetWeatherResult xmlns:a="http://schemas.datacontract.org/2004/07/WeatherChannel" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+        <a:Forcast>Cloudy</a:Forcast>
+        <a:Temperature>25</a:Temperature>
+      </GetWeatherResult>
+    </GetWeatherResponse>
+  </s:Body>
+</s:Envelope>

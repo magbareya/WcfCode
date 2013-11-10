@@ -1,0 +1,9 @@
+-+
+-DCCI
+-D_IDA_XL
+-DWINNT
+-IC:\yossin\FederationScopedCert\FederationScopedCert
+-IC:\Program Files\HP\Service Test\include
+-ec:\yossin\federationscopedcert\federationscopedcert\\logfile.log
+c:\yossin\federationscopedcert\federationscopedcert\\combined_FederationScopedCert.c
+c:\yossin\federationscopedcert\federationscopedcert\\pre_cci.c

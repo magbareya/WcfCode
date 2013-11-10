@@ -1,0 +1,8 @@
+[parameter:AddAllArgsParam]
+ParamName="AddAllArgsParam"
+IsEncrypt="NO"
+CurrentValue=""
+Type="Output"
+OriginalValue=""
+IsServer="NO"
+Prompt=""

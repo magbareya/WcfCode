@@ -1,0 +1,36 @@
+<?xml-stylesheet href="..\http.xsl" type="text/xsl"?>
+<report vuGenInstallDir="C:\Program Files\HP\LoadRunner">
+  <http>
+    <request>
+      <body>&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/03/addressing"&gt;
+  &lt;soap:Header&gt;
+    &lt;wsa:Action&gt;http://tempuri.org/IForacstService/GetWeather&lt;/wsa:Action&gt;
+    &lt;wsa:MessageID&gt;uuid:378d2f12-9da6-4e08-a1c9-d7f0379c6b43&lt;/wsa:MessageID&gt;
+    &lt;wsa:ReplyTo&gt;
+      &lt;wsa:Address&gt;http://schemas.xmlsoap.org/ws/2004/03/addressing/role/anonymous&lt;/wsa:Address&gt;
+    &lt;/wsa:ReplyTo&gt;
+    &lt;wsa:To&gt;http://localhost:9090/service&lt;/wsa:To&gt;
+  &lt;/soap:Header&gt;
+  &lt;soap:Body&gt;
+    &lt;GetWeather xmlns="http://tempuri.org/"&gt;
+      &lt;city&gt;abcde&lt;/city&gt;
+    &lt;/GetWeather&gt;
+  &lt;/soap:Body&gt;
+&lt;/soap:Envelope&gt;</body>
+    </request>
+    <response>
+      <body>&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/" xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:u="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"&gt;
+  &lt;s:Body u:Id="_2"&gt;
+    &lt;GetWeatherResponse xmlns="http://tempuri.org/"&gt;
+      &lt;GetWeatherResult xmlns:a="http://schemas.datacontract.org/2004/07/WeatherChannel" xmlns:i="http://www.w3.org/2001/XMLSchema-instance"&gt;
+        &lt;a:Forcast&gt;Cloudy&lt;/a:Forcast&gt;
+        &lt;a:Temperature&gt;25&lt;/a:Temperature&gt;
+      &lt;/GetWeatherResult&gt;
+    &lt;/GetWeatherResponse&gt;
+  &lt;/s:Body&gt;
+&lt;/s:Envelope&gt;</body>
+    </response>
+  </http>
+</report>

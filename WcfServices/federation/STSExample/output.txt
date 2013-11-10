@@ -1,0 +1,45 @@
+Virtual User Script started
+Starting action vuser_init.
+Web Services replay version 9.50.0 for WINXP; Toolkit: ".Net"; build 1
+Run-Time Settings file: "\\naveh05\PC COE (C)\examples\ST usage\st_wcf\scripts\federation\STSExample\\default.cfg"
+Vuser directory: "\\naveh05\PC COE (C)\examples\ST usage\st_wcf\scripts\federation\STSExample"
+Vuser output directory: "\\naveh05\PC COE (C)\examples\ST usage\st_wcf\scripts\federation\STSExample\"
+LOCAL start date/time:  2009-04-13 20:00:00
+Ending action vuser_init.
+Running Vuser...
+Starting iteration 1.
+Starting action Action.
+Action.c(8): Web service call "helloWorld_101" started
+Action.c(8): Creating handler
+Action.c(8): Searching for wcf router
+Action.c(8): Error: Configuration Error: Certificate 'CN=WCFQuickStartClient' was not found in windows store
+Action.c(8): Error Exceptions:
+Action.c(8): System.Runtime.InteropServices.SEHException: External component has thrown an exception.
+   at LrWsClientsLib.IWSReplayData.SetRequestBody(Array saBody)
+   at Mercury.LR.WS.ProxyBase.LrWsWebRequest.SyncProcessRequest()
+   at Mercury.LR.WS.ProxyBase.LrWsWebRequest.OnRequestStreamClosed(MemoryStream stream)
+   at Mercury.LR.WS.ProxyBase.WSMemoryStream.Close()
+   at Microsoft.Web.Services2.OutputStream.Close()
+   at System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   at Mercury.LR.NETProxy.HelloWorldService.helloWorld(String message)
+   at System.RuntimeMethodHandle._InvokeMethodFast(Object target, Object[] arguments, SignatureStruct& sig, MethodAttributes methodAttributes, RuntimeTypeHandle typeOwner)
+   at System.RuntimeMethodHandle.InvokeMethodFast(Object target, Object[] arguments, Signature sig, MethodAttributes methodAttributes, RuntimeTypeHandle typeOwner)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture, Boolean skipVisibilityChecks)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   at Mercury.LR.LrWsNetClient.ProxyCreator.InvokeMethod(String sMethod, IWSMethodParameters mParams, String sAsyncEvent)
+   at Mercury.LR.LrWsNetClient.NetReplay.InvokeMethod(String sMethod, IWSMethodParameters mParams, String sAsyncEvent)
+Action.c(8): Error: InvokeMethod failure: External component has thrown an exception..
+Action.c(8): Error stack trace:    at Mercury.LR.LrWsNetClient.ResultArgExtractor.CreateXmlArgsDoc()
+   at Mercury.LR.LrWsNetClient.ResultArgExtractor.ExtractArgAsXml(String sArgPath, ArgumentExtractionType extractionType)
+   at Mercury.LR.LrWsNetClient.ResultArgExtractor.ExtractArg(String sArgPath, Boolean IsSaveResultArgumentsAsIs, ArgumentExtractionType extractionType)
+   at Mercury.LR.LrWsNetClient.ProxyCreator.ExtractArg(String sArgPath, ArgumentExtractionType extractionType)
+   at Mercury.LR.LrWsNetClient.NetReplay.ExtractResultArg(String sArgPath, ArgumentExtractionType extractionType, Array& barrArgValue)
+Action.c(8): Error: ExtractResultArg failure: Object reference not set to an instance of an object..
+Action.c(8): Error: Web service call "helloWorld_101" execution failed
+Ending action Action.
+Ending iteration 1.
+Ending Vuser...
+Starting action vuser_end.
+Ending action vuser_end.
+Vuser Terminated.

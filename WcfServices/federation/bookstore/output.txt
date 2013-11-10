@@ -1,0 +1,366 @@
+Virtual User Script started
+Starting action vuser_init.
+Web Services replay version 9.50.0 for WINXP; Toolkit: ".Net"; build 1
+Run-Time Settings file: "\\naveh05\PC COE (C)\examples\ST usage\st_wcf\scripts\federation\bookstore\\default.cfg"
+Vuser directory: "\\naveh05\PC COE (C)\examples\ST usage\st_wcf\scripts\federation\bookstore"
+Vuser output directory: "\\naveh05\PC COE (C)\examples\ST usage\st_wcf\scripts\federation\bookstore\"
+LOCAL start date/time:  2009-04-27 13:14:09
+Ending action vuser_init.
+Running Vuser...
+Starting iteration 1.
+Starting action Action.
+Action.c(6): Web service call "BrowseBooks_101" started
+Action.c(6): Creating handler
+Action.c(6): Searching for wcf router
+Action.c(6): Preparing router
+Action.c(6): POST http://naveh05.emea.hpqcorp.net/FederationSample/BookStoreService/store.svc/browse
+Action.c(6): SOAPAction: http://tempuri.org/IBrowseBooks/BrowseBooks
+Action.c(6): Request Body:
+
+<?xml version="1.0" encoding="utf-16"?>
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/03/addressing">
+  <soap:Header>
+    <Action soap:mustUnderstand="1" xmlns="http://www.w3.org/2005/08/addressing">http://tempuri.org/IBrowseBooks/BrowseBooks</Action>
+    <To soap:mustUnderstand="1" xmlns="http://www.w3.org/2005/08/addressing">http://naveh05.emea.hpqcorp.net/FederationSample/BookStoreService/store.svc/browse</To>
+  </soap:Header>
+  <soap:Body>
+    <BrowseBooks xmlns="http://tempuri.org/">
+    </BrowseBooks>
+  </soap:Body>
+</soap:Envelope>
+
+
+Action.c(6): Sending request
+Action.c(6): Received response
+Action.c(6): Response Headers:
+
+Action.c(6): Content-Length:922
+Action.c(6): Cache-Control:private
+Action.c(6): Content-Type:application/soap+xml; charset=utf-8
+Action.c(6): Date:Mon, 27 Apr 2009 10:14:17 GMT
+Action.c(6): Server:Microsoft-IIS/5.1
+Action.c(6): X-AspNet-Version:2.0.50727
+Action.c(6): X-Powered-By:ASP.NET
+Action.c(6): 
+
+Action.c(6): Response Body:
+
+<?xml version="1.0" encoding="utf-16"?>
+<s:Envelope xmlns:s="http://www.w3.org/2003/05/soap-envelope" xmlns:a="http://www.w3.org/2005/08/addressing">
+  <s:Header>
+    <a:Action s:mustUnderstand="1">http://tempuri.org/IBrowseBooks/BrowseBooksResponse</a:Action>
+    <ActivityId CorrelationId="a76df1b7-c398-4af5-ba8b-83b2952a534c" xmlns="http://schemas.microsoft.com/2004/09/ServiceModel/Diagnostics">e491f569-c930-44ef-b0da-0d43fc73d820</ActivityId>
+    <a:RelatesTo>urn:uuid:da65233a-b023-4fec-bba6-36a095a1ced3</a:RelatesTo>
+  </s:Header>
+  <s:Body>
+    <BrowseBooksResponse xmlns="http://tempuri.org/">
+      <BrowseBooksResult xmlns:b="http://schemas.microsoft.com/2003/10/Serialization/Arrays" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+        <b:string>1.  Book Title One,  Jay Hamlin,  $18</b:string>
+        <b:string>2.  Book Title Two,  Alan Brewer,  $15</b:string>
+        <b:string>3.  Book Title Three,  Billie Jo Murray,  $14</b:string>
+      </BrowseBooksResult>
+    </BrowseBooksResponse>
+  </s:Body>
+</s:Envelope>
+
+Action.c(6): After saving response
+Action.c(6): Notify: Saving Parameter "BrowseBooks_101_Response = <BrowseBooks><BrowseBooksResult><string>1.  Book Title One,  Jay Hamlin,  $18</string><string>2.  Book Title Two,  Alan Brewer,  $15</string><string>3.  Book Title Three,  Billie Jo Murray,  $14</string></BrowseBooksResult></BrowseBooks>"
+Action.c(6): Notify: Saving Parameter "response = <s:Envelope xmlns:s="http://www.w3.org/2003/05/soap-envelope" xmlns:a="http://www.w3.org/2005/08/addressing">\r\n  <s:Header />\r\n  <s:Body>\r\n    <BrowseBooksResponse xmlns="http://tempuri.org/">\r\n      <BrowseBooksResult xmlns:b="http://schemas.microsoft.com/2003/10/Serialization/Arrays" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">\r\n        <b:string>1.  Book Title One,  Jay Hamlin,  $18</b:string>\r\n        <b:string>2.  Book Title Two,  Alan Brewer,  $15</b:string>\r\n        <b:string>3.  Book Title Three,  Billie Jo Murray,  $14</b:string>\r\n      </BrowseBooksResult>\r\n    </BrowseBooksResponse>\r\n  </s:Body>\r\n</s:Envelope>"
+Action.c(6): Web service call "BrowseBooks_101" was successful
+Action.c(20): Web service call "BuyBook_101" started
+Action.c(20): Searching for wcf router
+Action.c(20): Preparing router
+Action.c(20): POST http://naveh05.emea.hpqcorp.net/FederationSample/BookStoreService/store.svc/buy
+Action.c(20): SOAPAction: http://tempuri.org/IBuyBook/BuyBook
+Action.c(20): Request Body:
+
+<?xml version="1.0" encoding="utf-16"?>
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/03/addressing">
+  <soap:Header>
+    <Action soap:mustUnderstand="1" xmlns="http://www.w3.org/2005/08/addressing">http://tempuri.org/IBuyBook/BuyBook</Action>
+    <To soap:mustUnderstand="1" xmlns="http://www.w3.org/2005/08/addressing">http://naveh05.emea.hpqcorp.net/FederationSample/BookStoreService/store.svc/buy</To>
+  </soap:Header>
+  <soap:Body>
+    <BuyBook xmlns="http://tempuri.org/">
+      <emailAddress>abcde</emailAddress>
+      <shipAddress>abcde</shipAddress>
+    </BuyBook>
+  </soap:Body>
+</soap:Envelope>
+
+
+Action.c(20): Sending request
+Action.c(20): Received response
+Action.c(20): Response Headers:
+
+Action.c(20): Content-Length:5486
+Action.c(20): Cache-Control:private
+Action.c(20): Content-Type:application/soap+xml; charset=utf-8
+Action.c(20): Date:Mon, 27 Apr 2009 10:14:23 GMT
+Action.c(20): Server:Microsoft-IIS/5.1
+Action.c(20): X-AspNet-Version:2.0.50727
+Action.c(20): X-Powered-By:ASP.NET
+Action.c(20): 
+
+Action.c(20): Response Body:
+
+<?xml version="1.0" encoding="utf-16"?>
+<s:Envelope xmlns:s="http://www.w3.org/2003/05/soap-envelope" xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:u="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+  <s:Header>
+    <a:Action s:mustUnderstand="1" u:Id="_2">http://tempuri.org/IBuyBook/BuyBookResponse</a:Action>
+    <ActivityId CorrelationId="7d8a3918-7fbd-4297-bc50-3db8bd2d06bb" xmlns="http://schemas.microsoft.com/2004/09/ServiceModel/Diagnostics">5dc15417-bf76-404e-986a-eb967b51d65c</ActivityId>
+    <a:RelatesTo u:Id="_3">urn:uuid:f4000490-cfff-413f-8fcf-0e72458b4955</a:RelatesTo>
+    <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">
+      <u:Timestamp u:Id="uuid-aa663b13-874b-4c63-bc08-4d1321b6120f-13">
+        <u:Created>2009-04-27T10:14:23.860Z</u:Created>
+        <u:Expires>2009-04-27T10:19:23.860Z</u:Expires>
+      </u:Timestamp>
+      <c:DerivedKeyToken u:Id="uuid-aa663b13-874b-4c63-bc08-4d1321b6120f-9" xmlns:c="http://schemas.xmlsoap.org/ws/2005/02/sc">
+        <o:SecurityTokenReference>
+          <o:Reference URI="urn:uuid:6cfed41b-4d4b-4e6e-913d-05257866cf0b" ValueType="http://schemas.xmlsoap.org/ws/2005/02/sc/sct">
+          </o:Reference>
+        </o:SecurityTokenReference>
+        <c:Offset>0</c:Offset>
+        <c:Length>24</c:Length>
+        <c:Nonce>Xn3rPVsd2Tjl0r/SCUKKNg==</c:Nonce>
+      </c:DerivedKeyToken>
+      <c:DerivedKeyToken u:Id="uuid-aa663b13-874b-4c63-bc08-4d1321b6120f-10" xmlns:c="http://schemas.xmlsoap.org/ws/2005/02/sc">
+        <o:SecurityTokenReference>
+          <o:Reference URI="urn:uuid:6cfed41b-4d4b-4e6e-913d-05257866cf0b" ValueType="http://schemas.xmlsoap.org/ws/2005/02/sc/sct">
+          </o:Reference>
+        </o:SecurityTokenReference>
+        <c:Nonce>t7HUpzVuwxPYSfBmXncz4Q==</c:Nonce>
+      </c:DerivedKeyToken>
+      <e:ReferenceList xmlns:e="http://www.w3.org/2001/04/xmlenc#">
+        <e:DataReference URI="#_1">
+        </e:DataReference>
+        <e:DataReference URI="#_4">
+        </e:DataReference>
+      </e:ReferenceList>
+      <e:EncryptedData Id="_4" Type="http://www.w3.org/2001/04/xmlenc#Element" xmlns:e="http://www.w3.org/2001/04/xmlenc#">
+        <e:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes256-cbc">
+        </e:EncryptionMethod>
+        <KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+          <o:SecurityTokenReference>
+            <o:Reference ValueType="http://schemas.xmlsoap.org/ws/2005/02/sc/dk" URI="#uuid-aa663b13-874b-4c63-bc08-4d1321b6120f-10">
+            </o:Reference>
+          </o:SecurityTokenReference>
+        </KeyInfo>
+        <e:CipherData>
+          <e:CipherValue>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</e:CipherValue>
+        </e:CipherData>
+      </e:EncryptedData>
+    </o:Security>
+  </s:Header>
+  <s:Body u:Id="_0">
+    <BuyBookResponse xmlns="http://tempuri.org/">
+      <BuyBookResult>EMEA\naveh, the purchase of book Book Title Two has been approved. The details of shipping date and confirmation receipt will be mailed to abcde shortly</BuyBookResult>
+    </BuyBookResponse>
+  </s:Body>
+</s:Envelope>
+
+Action.c(20): After saving response
+Action.c(20): Notify: Saving Parameter "BuyBook_101_Response = <BuyBook><BuyBookResult>EMEA\naveh, the purchase of book Book Title Two has been approved. The details of shipping date and confirmation receipt will be mailed to abcde shortly</BuyBookResult></BuyBook>"
+Action.c(20): Notify: Saving Parameter "response = <s:Envelope xmlns:s="http://www.w3.org/2003/05/soap-envelope" xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:u="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">\r\n  <s:Header />\r\n  <s:Body u:Id="_0">\r\n    <BuyBookResponse xmlns="http://tempuri.org/">\r\n      <BuyBookResult>EMEA\naveh, the purchase of book Book Title Two has been approved. The details of shipping date and confirmation receipt will be mailed to abcde shortly</BuyBookResult>\r\n    </BuyBookResponse>\r\n  </s:Body>\r\n</s:Envelope>"
+Action.c(20): Notify: Saving Parameter "Param_BuyBookResult = EMEA\naveh, the purchase of book Book Title Two has been approved. The details of shipping date and confirmation receipt will be mailed to abcde shortly"
+Action.c(20): Web service call "BuyBook_101" was successful
+Action.c(36): Web service call "BuyBook_101" started
+Action.c(36): Searching for wcf router
+Action.c(36): Preparing router
+Action.c(36): POST http://naveh05.emea.hpqcorp.net/FederationSample/BookStoreService/store.svc/buy
+Action.c(36): SOAPAction: http://tempuri.org/IBuyBook/BuyBook
+Action.c(36): Request Body:
+
+<?xml version="1.0" encoding="utf-16"?>
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/03/addressing">
+  <soap:Header>
+    <Action soap:mustUnderstand="1" xmlns="http://www.w3.org/2005/08/addressing">http://tempuri.org/IBuyBook/BuyBook</Action>
+    <To soap:mustUnderstand="1" xmlns="http://www.w3.org/2005/08/addressing">http://naveh05.emea.hpqcorp.net/FederationSample/BookStoreService/store.svc/buy</To>
+  </soap:Header>
+  <soap:Body>
+    <BuyBook xmlns="http://tempuri.org/">
+      <emailAddress>abcde</emailAddress>
+      <shipAddress>abcde</shipAddress>
+    </BuyBook>
+  </soap:Body>
+</soap:Envelope>
+
+
+Action.c(36): Sending request
+Action.c(36): Received response
+Action.c(36): Response Headers:
+
+Action.c(36): Content-Length:5486
+Action.c(36): Cache-Control:private
+Action.c(36): Content-Type:application/soap+xml; charset=utf-8
+Action.c(36): Date:Mon, 27 Apr 2009 10:14:23 GMT
+Action.c(36): Server:Microsoft-IIS/5.1
+Action.c(36): X-AspNet-Version:2.0.50727
+Action.c(36): X-Powered-By:ASP.NET
+Action.c(36): 
+
+Action.c(36): Response Body:
+
+<?xml version="1.0" encoding="utf-16"?>
+<s:Envelope xmlns:s="http://www.w3.org/2003/05/soap-envelope" xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:u="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+  <s:Header>
+    <a:Action s:mustUnderstand="1" u:Id="_2">http://tempuri.org/IBuyBook/BuyBookResponse</a:Action>
+    <ActivityId CorrelationId="4bdefe96-d812-49e7-ad7b-616b3036cad1" xmlns="http://schemas.microsoft.com/2004/09/ServiceModel/Diagnostics">4fb13b21-1d89-4ec5-bc84-13125d9f5005</ActivityId>
+    <a:RelatesTo u:Id="_3">urn:uuid:6eee2ea8-3edc-4a69-9f6e-5beb53e800c1</a:RelatesTo>
+    <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">
+      <u:Timestamp u:Id="uuid-aa663b13-874b-4c63-bc08-4d1321b6120f-16">
+        <u:Created>2009-04-27T10:14:24.141Z</u:Created>
+        <u:Expires>2009-04-27T10:19:24.141Z</u:Expires>
+      </u:Timestamp>
+      <c:DerivedKeyToken u:Id="uuid-aa663b13-874b-4c63-bc08-4d1321b6120f-9" xmlns:c="http://schemas.xmlsoap.org/ws/2005/02/sc">
+        <o:SecurityTokenReference>
+          <o:Reference URI="urn:uuid:6cfed41b-4d4b-4e6e-913d-05257866cf0b" ValueType="http://schemas.xmlsoap.org/ws/2005/02/sc/sct">
+          </o:Reference>
+        </o:SecurityTokenReference>
+        <c:Offset>0</c:Offset>
+        <c:Length>24</c:Length>
+        <c:Nonce>Xn3rPVsd2Tjl0r/SCUKKNg==</c:Nonce>
+      </c:DerivedKeyToken>
+      <c:DerivedKeyToken u:Id="uuid-aa663b13-874b-4c63-bc08-4d1321b6120f-10" xmlns:c="http://schemas.xmlsoap.org/ws/2005/02/sc">
+        <o:SecurityTokenReference>
+          <o:Reference URI="urn:uuid:6cfed41b-4d4b-4e6e-913d-05257866cf0b" ValueType="http://schemas.xmlsoap.org/ws/2005/02/sc/sct">
+          </o:Reference>
+        </o:SecurityTokenReference>
+        <c:Nonce>t7HUpzVuwxPYSfBmXncz4Q==</c:Nonce>
+      </c:DerivedKeyToken>
+      <e:ReferenceList xmlns:e="http://www.w3.org/2001/04/xmlenc#">
+        <e:DataReference URI="#_1">
+        </e:DataReference>
+        <e:DataReference URI="#_4">
+        </e:DataReference>
+      </e:ReferenceList>
+      <e:EncryptedData Id="_4" Type="http://www.w3.org/2001/04/xmlenc#Element" xmlns:e="http://www.w3.org/2001/04/xmlenc#">
+        <e:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes256-cbc">
+        </e:EncryptionMethod>
+        <KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+          <o:SecurityTokenReference>
+            <o:Reference ValueType="http://schemas.xmlsoap.org/ws/2005/02/sc/dk" URI="#uuid-aa663b13-874b-4c63-bc08-4d1321b6120f-10">
+            </o:Reference>
+          </o:SecurityTokenReference>
+        </KeyInfo>
+        <e:CipherData>
+          <e:CipherValue>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</e:CipherValue>
+        </e:CipherData>
+      </e:EncryptedData>
+    </o:Security>
+  </s:Header>
+  <s:Body u:Id="_0">
+    <BuyBookResponse xmlns="http://tempuri.org/">
+      <BuyBookResult>EMEA\naveh, the purchase of book Book Title Two has been approved. The details of shipping date and confirmation receipt will be mailed to abcde shortly</BuyBookResult>
+    </BuyBookResponse>
+  </s:Body>
+</s:Envelope>
+
+Action.c(36): After saving response
+Action.c(36): Notify: Saving Parameter "BuyBook_101_Response = <BuyBook><BuyBookResult>EMEA\naveh, the purchase of book Book Title Two has been approved. The details of shipping date and confirmation receipt will be mailed to abcde shortly</BuyBookResult></BuyBook>"
+Action.c(36): Notify: Saving Parameter "response = <s:Envelope xmlns:s="http://www.w3.org/2003/05/soap-envelope" xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:u="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">\r\n  <s:Header />\r\n  <s:Body u:Id="_0">\r\n    <BuyBookResponse xmlns="http://tempuri.org/">\r\n      <BuyBookResult>EMEA\naveh, the purchase of book Book Title Two has been approved. The details of shipping date and confirmation receipt will be mailed to abcde shortly</BuyBookResult>\r\n    </BuyBookResponse>\r\n  </s:Body>\r\n</s:Envelope>"
+Action.c(36): Notify: Saving Parameter "Param_BuyBookResult = EMEA\naveh, the purchase of book Book Title Two has been approved. The details of shipping date and confirmation receipt will be mailed to abcde shortly"
+Action.c(36): Web service call "BuyBook_101" was successful
+Action.c(52): Web service call "BuyBook_101" started
+Action.c(52): Searching for wcf router
+Action.c(52): Preparing router
+Action.c(52): POST http://naveh05.emea.hpqcorp.net/FederationSample/BookStoreService/store.svc/buy
+Action.c(52): SOAPAction: http://tempuri.org/IBuyBook/BuyBook
+Action.c(52): Request Body:
+
+<?xml version="1.0" encoding="utf-16"?>
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/03/addressing">
+  <soap:Header>
+    <Action soap:mustUnderstand="1" xmlns="http://www.w3.org/2005/08/addressing">http://tempuri.org/IBuyBook/BuyBook</Action>
+    <To soap:mustUnderstand="1" xmlns="http://www.w3.org/2005/08/addressing">http://naveh05.emea.hpqcorp.net/FederationSample/BookStoreService/store.svc/buy</To>
+  </soap:Header>
+  <soap:Body>
+    <BuyBook xmlns="http://tempuri.org/">
+      <emailAddress>abcde</emailAddress>
+      <shipAddress>abcde</shipAddress>
+    </BuyBook>
+  </soap:Body>
+</soap:Envelope>
+
+
+Action.c(52): Sending request
+Action.c(52): Received response
+Action.c(52): Response Headers:
+
+Action.c(52): Content-Length:5486
+Action.c(52): Cache-Control:private
+Action.c(52): Content-Type:application/soap+xml; charset=utf-8
+Action.c(52): Date:Mon, 27 Apr 2009 10:14:23 GMT
+Action.c(52): Server:Microsoft-IIS/5.1
+Action.c(52): X-AspNet-Version:2.0.50727
+Action.c(52): X-Powered-By:ASP.NET
+Action.c(52): 
+
+Action.c(52): Response Body:
+
+<?xml version="1.0" encoding="utf-16"?>
+<s:Envelope xmlns:s="http://www.w3.org/2003/05/soap-envelope" xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:u="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+  <s:Header>
+    <a:Action s:mustUnderstand="1" u:Id="_2">http://tempuri.org/IBuyBook/BuyBookResponse</a:Action>
+    <ActivityId CorrelationId="9f0814cd-0a05-490a-bfc7-6510a1a57ada" xmlns="http://schemas.microsoft.com/2004/09/ServiceModel/Diagnostics">54dd8d42-2578-4230-bdcb-68e3f67a8043</ActivityId>
+    <a:RelatesTo u:Id="_3">urn:uuid:f18dd9fb-3110-4b2f-b6e9-37c193b1f111</a:RelatesTo>
+    <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">
+      <u:Timestamp u:Id="uuid-aa663b13-874b-4c63-bc08-4d1321b6120f-19">
+        <u:Created>2009-04-27T10:14:24.297Z</u:Created>
+        <u:Expires>2009-04-27T10:19:24.297Z</u:Expires>
+      </u:Timestamp>
+      <c:DerivedKeyToken u:Id="uuid-aa663b13-874b-4c63-bc08-4d1321b6120f-9" xmlns:c="http://schemas.xmlsoap.org/ws/2005/02/sc">
+        <o:SecurityTokenReference>
+          <o:Reference URI="urn:uuid:6cfed41b-4d4b-4e6e-913d-05257866cf0b" ValueType="http://schemas.xmlsoap.org/ws/2005/02/sc/sct">
+          </o:Reference>
+        </o:SecurityTokenReference>
+        <c:Offset>0</c:Offset>
+        <c:Length>24</c:Length>
+        <c:Nonce>Xn3rPVsd2Tjl0r/SCUKKNg==</c:Nonce>
+      </c:DerivedKeyToken>
+      <c:DerivedKeyToken u:Id="uuid-aa663b13-874b-4c63-bc08-4d1321b6120f-10" xmlns:c="http://schemas.xmlsoap.org/ws/2005/02/sc">
+        <o:SecurityTokenReference>
+          <o:Reference URI="urn:uuid:6cfed41b-4d4b-4e6e-913d-05257866cf0b" ValueType="http://schemas.xmlsoap.org/ws/2005/02/sc/sct">
+          </o:Reference>
+        </o:SecurityTokenReference>
+        <c:Nonce>t7HUpzVuwxPYSfBmXncz4Q==</c:Nonce>
+      </c:DerivedKeyToken>
+      <e:ReferenceList xmlns:e="http://www.w3.org/2001/04/xmlenc#">
+        <e:DataReference URI="#_1">
+        </e:DataReference>
+        <e:DataReference URI="#_4">
+        </e:DataReference>
+      </e:ReferenceList>
+      <e:EncryptedData Id="_4" Type="http://www.w3.org/2001/04/xmlenc#Element" xmlns:e="http://www.w3.org/2001/04/xmlenc#">
+        <e:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes256-cbc">
+        </e:EncryptionMethod>
+        <KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+          <o:SecurityTokenReference>
+            <o:Reference ValueType="http://schemas.xmlsoap.org/ws/2005/02/sc/dk" URI="#uuid-aa663b13-874b-4c63-bc08-4d1321b6120f-10">
+            </o:Reference>
+          </o:SecurityTokenReference>
+        </KeyInfo>
+        <e:CipherData>
+          <e:CipherValue>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</e:CipherValue>
+        </e:CipherData>
+      </e:EncryptedData>
+    </o:Security>
+  </s:Header>
+  <s:Body u:Id="_0">
+    <BuyBookResponse xmlns="http://tempuri.org/">
+      <BuyBookResult>EMEA\naveh, the purchase of book Book Title Two has been approved. The details of shipping date and confirmation receipt will be mailed to abcde shortly</BuyBookResult>
+    </BuyBookResponse>
+  </s:Body>
+</s:Envelope>
+
+Action.c(52): After saving response
+Action.c(52): Notify: Saving Parameter "BuyBook_101_Response = <BuyBook><BuyBookResult>EMEA\naveh, the purchase of book Book Title Two has been approved. The details of shipping date and confirmation receipt will be mailed to abcde shortly</BuyBookResult></BuyBook>"
+Action.c(52): Notify: Saving Parameter "response = <s:Envelope xmlns:s="http://www.w3.org/2003/05/soap-envelope" xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:u="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">\r\n  <s:Header />\r\n  <s:Body u:Id="_0">\r\n    <BuyBookResponse xmlns="http://tempuri.org/">\r\n      <BuyBookResult>EMEA\naveh, the purchase of book Book Title Two has been approved. The details of shipping date and confirmation receipt will be mailed to abcde shortly</BuyBookResult>\r\n    </BuyBookResponse>\r\n  </s:Body>\r\n</s:Envelope>"
+Action.c(52): Notify: Saving Parameter "Param_BuyBookResult = EMEA\naveh, the purchase of book Book Title Two has been approved. The details of shipping date and confirmation receipt will be mailed to abcde shortly"
+Action.c(52): Web service call "BuyBook_101" was successful
+Ending action Action.
+Ending iteration 1.
+Ending Vuser...
+Starting action vuser_end.
+Ending action vuser_end.
+Vuser Terminated.

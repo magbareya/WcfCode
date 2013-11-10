@@ -1,0 +1,14 @@
+<protocols scenario="customBinding" uiType="customBinding" xmlns="http://hp/ServiceTest/config">
+  <mode>Private</mode>
+  <customization>
+    <textMessageEncoding />
+    <security authenticationMode="SecureConversation">
+      <secureConversationBootstrap authenticationMode="SspiNegotiated" />
+    </security>
+    <httpTransport />
+  </customization>
+  <identities>
+    <server />
+    <client />
+  </identities>
+</protocols>

@@ -1,0 +1,12 @@
+<?xml-stylesheet href="..\web_service_call.xsl" type="text/xsl"?>
+<report vuGenInstallDir="c:\Program Files (x86)\HP\LoadRunner\">
+  <web_service_call>
+    <service name="UsernamePasswordService" />
+    <port name="WSHttpBinding_IUsernamePasswordService" />
+    <operation name="EchoString" />
+    <wsdl location="http://localhost:8731/Design_Time_Addresses/UsernameService/UsernamePasswordService/?wsdl" />
+    <address url="" />
+    <toolkit name=".Net" />
+    <aspect name="Positive Testing" />
+  </web_service_call>
+</report>

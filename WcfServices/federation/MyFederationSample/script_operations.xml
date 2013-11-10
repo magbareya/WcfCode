@@ -1,0 +1,2 @@
+<?xml version="1.0"?>
+<Services><Service name="ForacstService" namespace="http://tempuri.org/"><Port name="CustomBinding_IForacstService"><Operation>GetWeather</Operation></Port></Service></Services>

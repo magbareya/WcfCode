@@ -1,0 +1,15 @@
+<protocols scenario="wsUserName" uiType="wsHttpBindingUsernameMessage" xmlns="http://hp/ServiceTest/config">
+  <mode>Private</mode>
+  <customization>
+    <security />
+  </customization>
+  <identities>
+    <server>
+      <expectedDns>WSE2QuickStartClient</expectedDns>
+    </server>
+    <client>
+      <username>a</username>
+      <password>p</password>
+    </client>
+  </identities>
+</protocols>

@@ -1,0 +1,9 @@
+-+
+-DCCI
+-D_IDA_XL
+-DWINNT
+-IC:\Mahmoud\Work\AppsWorthToSave\WCF-Services\federation\MyFederationSample
+-IC:\Program Files (x86)\HP\LoadRunner\include
+-ec:\mahmoud\work\appsworthtosave\wcf-services\federation\myfederationsample\\logfile.log
+c:\mahmoud\work\appsworthtosave\wcf-services\federation\myfederationsample\\combined_MyFederationSample.c
+c:\mahmoud\work\appsworthtosave\wcf-services\federation\myfederationsample\\pre_cci.c

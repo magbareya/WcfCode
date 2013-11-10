@@ -1,0 +1,10 @@
+<protocols scenario="wsHttpSPNego" uiType="wsHttpBindingWindows" xmlns="http://hp/ServiceTest/config">
+  <mode>Private</mode>
+  <customization>
+    <security establishSecurityContext="False" />
+  </customization>
+  <identities>
+    <server />
+    <client />
+  </identities>
+</protocols>

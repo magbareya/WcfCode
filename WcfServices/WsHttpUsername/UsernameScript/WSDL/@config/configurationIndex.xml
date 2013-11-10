@@ -1,0 +1,7 @@
+<configurationMapping>
+  <service uniqueName="UsernamePasswordService">
+    <port name="*">
+      <configPath>Username.stss</configPath>
+    </port>
+  </service>
+</configurationMapping>

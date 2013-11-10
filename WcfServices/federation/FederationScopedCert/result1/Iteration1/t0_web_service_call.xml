@@ -1,0 +1,12 @@
+<?xml-stylesheet href="..\web_service_call.xsl" type="text/xsl"?>
+<report vuGenInstallDir="C:\Program Files\HP\Service Test">
+  <web_service_call>
+    <service name="Service1" />
+    <port name="WSFederationHttpBinding_ICalculator" />
+    <operation name="Add" />
+    <wsdl location="http://localhost/CalcFedService/Service1.svc?wsdl" />
+    <address url="http://YNEEMAN01.emea.hpqcorp.net/FederationScopedCert/CalcFedService/Service1.svc" />
+    <toolkit name=".Net" />
+    <aspect name="Positive Testing" />
+  </web_service_call>
+</report>

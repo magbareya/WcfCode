@@ -1,0 +1,8 @@
+[parameter:GetWeather_101_Response]
+ParamName="GetWeather_101_Response"
+IsEncrypt="NO"
+CurrentValue=""
+Type="Output"
+OriginalValue=""
+IsServer="NO"
+Prompt=""

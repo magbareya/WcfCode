@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="0fad02ed-5699-4892-aba2-5f3cb4bff1f2" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://naveh05:9090/service?WSDL" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="cb1e80bb-476b-4bea-99a6-cbd4d34348d9" SourceId="1" SourceUrl="http://naveh05:9090/service?xsd=xsd0" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="35c5ce1e-3d24-4821-b169-ba862df40a13" SourceId="1" SourceUrl="http://naveh05:9090/service?xsd=xsd2" />
+    <MetadataFile FileName="ForacstService.wsdl" MetadataType="Wsdl" ID="b8c03acd-c104-4208-8494-c8af02d3ec3f" SourceId="1" SourceUrl="http://naveh05:9090/service?WSDL" />
+    <MetadataFile FileName="service2.xsd" MetadataType="Schema" ID="3ee3460e-ce93-48a0-a4dd-c8433c840977" SourceId="1" SourceUrl="http://naveh05:9090/service?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

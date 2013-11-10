@@ -1,0 +1,7 @@
+<protocols scenario="customBinding" uiType="PlainSOAP" xmlns="http://hp/ServiceTest/config">
+  <mode>Private</mode>
+  <customization>
+    <textMessageEncoding />
+    <httpTransport />
+  </customization>
+</protocols>

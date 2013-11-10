@@ -1,0 +1,21 @@
+<protocols scenario="wsMutualCertificates" uiType="wsHttpBindingCertificate" xmlns="http://hp/ServiceTest/config">
+  <mode>Private</mode>
+  <customization>
+    <security negotiateServiceCredential="False" />
+  </customization>
+  <identities>
+    <server>
+      <expectedDns>localhost</expectedDns>
+    </server>
+    <client>
+      <certificate>
+        <windowsStore>
+          <storeLocation>CurrentUser</storeLocation>
+          <storeName>My</storeName>
+          <X509FindType>FindBySubjectDistinguishedName</X509FindType>
+          <X509FindValue>CN=WSE2QuickStartClient</X509FindValue>
+        </windowsStore>
+      </certificate>
+    </client>
+  </identities>
+</protocols>

@@ -1,0 +1,2 @@
+<?xml version="1.0"?>
+<Services><Service name="ForacstService"><Port name="CustomBinding_IForacstService"><Operation>GetWeather</Operation></Port></Service></Services>

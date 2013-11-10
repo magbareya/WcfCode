@@ -1,0 +1,2 @@
+<?xml version="1.0"?>
+<Services><Service name="HelloWorldService"><Port name="WSFederationHttpBinding_IHelloWorld"><Operation>helloWorld</Operation></Port></Service></Services>

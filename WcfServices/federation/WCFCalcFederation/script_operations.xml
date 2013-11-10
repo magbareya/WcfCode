@@ -1,0 +1,2 @@
+<?xml version="1.0"?>
+<Services><Service name="Service1" namespace="http://tempuri.org/"><Port name="WSFederationHttpBinding_ICalculator"><Operation>Add</Operation></Port></Service></Services>

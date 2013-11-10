@@ -1,0 +1,28 @@
+<protocols scenario="WSFederationBinding" uiType="WSFederationBinding" xmlns="http://hp/ServiceTest/config">
+  <mode>Private</mode>
+  <customization>
+    <textMessageEncoding />
+    <security authenticationMode="IssuedToken">
+      <issuedTokenParameters tokenType="http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLV1.1">
+        <issuer address="http://localhost:9091/STSHome" protocolsScenarioName="ServiceSTS" />
+      </issuedTokenParameters>
+    </security>
+    <httpTransport />
+  </customization>
+  <identities>
+    <server />
+  </identities>
+  <referencedConfigurations>
+    <protocols scenario="wsHttpSPNego" uiType="wsHttpBindingWindows" xmlns="http://hp/ServiceTest/config">
+      <mode>Private</mode>
+      <customization />
+      <identities>
+        <server>
+          <expectedSPN>localhost</expectedSPN>
+        </server>
+        <client />
+      </identities>
+    </protocols>
+    <filePath>C:\Documents and Settings\naveh\Local Settings\Temp\noname483\WSDL\@config\HomeSTS.stss</filePath>
+  </referencedConfigurations>
+</protocols>

@@ -1,0 +1,34 @@
+<?xml-stylesheet href="..\http.xsl" type="text/xsl"?>
+<report vuGenInstallDir="C:\Program Files\HP\Service Test">
+  <http>
+    <request>
+      <body>&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/03/addressing"&gt;
+  &lt;soap:Header&gt;
+    &lt;wsa:Action&gt;http://Neeman.Samples/ICalculator/Add&lt;/wsa:Action&gt;
+    &lt;wsa:MessageID&gt;uuid:8a32dde3-7c6a-441d-a731-fd22e5ff049d&lt;/wsa:MessageID&gt;
+    &lt;wsa:ReplyTo&gt;
+      &lt;wsa:Address&gt;http://schemas.xmlsoap.org/ws/2004/03/addressing/role/anonymous&lt;/wsa:Address&gt;
+    &lt;/wsa:ReplyTo&gt;
+    &lt;wsa:To&gt;http://yneeman01.emea.hpqcorp.net/FederationScopedCert/CalcFedService/Service1.svc&lt;/wsa:To&gt;
+  &lt;/soap:Header&gt;
+  &lt;soap:Body&gt;
+    &lt;Add xmlns="http://Neeman.Samples"&gt;
+      &lt;n1&gt;12&lt;/n1&gt;
+      &lt;n2&gt;21&lt;/n2&gt;
+    &lt;/Add&gt;
+  &lt;/soap:Body&gt;
+&lt;/soap:Envelope&gt;</body>
+    </request>
+    <response>
+      <body>&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/" xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:u="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"&gt;
+  &lt;s:Body u:Id="_0"&gt;
+    &lt;AddResponse xmlns="http://Neeman.Samples"&gt;
+      &lt;AddResult&gt;33&lt;/AddResult&gt;
+    &lt;/AddResponse&gt;
+  &lt;/s:Body&gt;
+&lt;/s:Envelope&gt;</body>
+    </response>
+  </http>
+</report>

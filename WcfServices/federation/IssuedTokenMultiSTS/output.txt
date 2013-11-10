@@ -1,0 +1,105 @@
+Virtual User Script started
+Starting action vuser_init.
+Web Services replay version 9.50.0 for WINXP; Toolkit: ".Net"; build 1
+Run-Time Settings file: "C:\Documents and Settings\naveh\Local Settings\Temp\noname483\\default.cfg"
+Vuser directory: "C:\Documents and Settings\naveh\Local Settings\Temp\noname483"
+Vuser output directory: "C:\Documents and Settings\naveh\Local Settings\Temp\noname483\"
+LOCAL start date/time:  2009-02-16 14:38:42
+Ending action vuser_init.
+Running Vuser...
+Starting iteration 1.
+Starting action Action.
+Action.c(4): Web service call "GetWeather_101" started
+Action.c(4): Creating handler
+Action.c(4): Searching for wcf router
+Action.c(4): Preparing router
+Action.c(4): POST http://localhost:9090/service
+Action.c(4): SOAPAction: http://tempuri.org/IForacstService/GetWeather
+Action.c(4): Request Body:
+
+<?xml version="1.0" encoding="utf-16"?>
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/03/addressing">
+  <soap:Header>
+    <Action soap:mustUnderstand="1" xmlns="http://www.w3.org/2005/08/addressing">http://tempuri.org/IForacstService/GetWeather</Action>
+    <To soap:mustUnderstand="1" xmlns="http://www.w3.org/2005/08/addressing">http://localhost:9090/service</To>
+  </soap:Header>
+  <soap:Body>
+    <GetWeather xmlns="http://tempuri.org/">
+      <city>abcde</city>
+    </GetWeather>
+  </soap:Body>
+</soap:Envelope>
+
+
+Action.c(4): Sending request
+Action.c(4): Received response
+Action.c(4): Response Body:
+
+<?xml version="1.0" encoding="utf-16"?>
+<s:Envelope xmlns:s="http://www.w3.org/2003/05/soap-envelope" xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:u="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+  <s:Header>
+    <a:Action s:mustUnderstand="1" u:Id="_4">http://tempuri.org/IForacstService/GetWeatherResponse</a:Action>
+    <ActivityId CorrelationId="9cfe5b60-cd03-462f-a759-872b8d2ead28" xmlns="http://schemas.microsoft.com/2004/09/ServiceModel/Diagnostics">2bc054a2-74d3-4b29-8879-eebcecffaf46</ActivityId>
+    <a:RelatesTo u:Id="_5">urn:uuid:c7c7aa48-890e-4164-8a30-1adfabb7d9bf</a:RelatesTo>
+    <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">
+      <u:Timestamp u:Id="uuid-92279e75-e043-4ac6-af0d-15ccf257e0bc-4">
+        <u:Created>2009-02-16T12:38:49.968Z</u:Created>
+        <u:Expires>2009-02-16T12:43:49.968Z</u:Expires>
+      </u:Timestamp>
+      <c:DerivedKeyToken u:Id="_0" xmlns:c="http://schemas.xmlsoap.org/ws/2005/02/sc">
+        <o:SecurityTokenReference>
+          <o:KeyIdentifier ValueType="http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.0#SAMLAssertionID">_3c16ea7c-7662-4f95-b596-ae1cc5ced164</o:KeyIdentifier>
+        </o:SecurityTokenReference>
+        <c:Offset>0</c:Offset>
+        <c:Length>24</c:Length>
+        <c:Nonce>ysnPRRDkDnLu+GmanDoGdQ==</c:Nonce>
+      </c:DerivedKeyToken>
+      <c:DerivedKeyToken u:Id="_1" xmlns:c="http://schemas.xmlsoap.org/ws/2005/02/sc">
+        <o:SecurityTokenReference>
+          <o:KeyIdentifier ValueType="http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.0#SAMLAssertionID">_3c16ea7c-7662-4f95-b596-ae1cc5ced164</o:KeyIdentifier>
+        </o:SecurityTokenReference>
+        <c:Nonce>uiqbBAD46X8/7jli7islQA==</c:Nonce>
+      </c:DerivedKeyToken>
+      <e:ReferenceList xmlns:e="http://www.w3.org/2001/04/xmlenc#">
+        <e:DataReference URI="#_3">
+        </e:DataReference>
+        <e:DataReference URI="#_6">
+        </e:DataReference>
+      </e:ReferenceList>
+      <e:EncryptedData Id="_6" Type="http://www.w3.org/2001/04/xmlenc#Element" xmlns:e="http://www.w3.org/2001/04/xmlenc#">
+        <e:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes256-cbc">
+        </e:EncryptionMethod>
+        <KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+          <o:SecurityTokenReference>
+            <o:Reference URI="#_1">
+            </o:Reference>
+          </o:SecurityTokenReference>
+        </KeyInfo>
+        <e:CipherData>
+          <e:CipherValue>N3YbOyJbOeRV6ZZEI7BPhkY3im3UlyA+YmnFy7XYWfJ+J2tLb7PVxq6+wrR897QyIQvW5GqQwzP/MncjK1IyiQqwR+bBeMXczEcUymooEQS0K6nq7OsbC/U53UBO6D29iFdt2l4DDDRMzBGlU2SLpQ9w/rpeooKExT0Tnb6i3d1/3CKMyZZm/2YLTK7cETdsSByXkStOLsPAKFOnGaoYo9lsEZ3vRdxzOjDqV4wY/6q/dzticQsFqmY13G5kRYSuhxdT/GuB26DOFzyTtVNO3c/iiH5sztnNMj5S7CR1H6YFpY1Fxn7GZUimKUTMY0tMSOkTYmJYBQXDk6ReR7QlLPNE1XbNqtPCWk9IIpQ3oSqag1OGJWrlFpcEqAsHT+pAGSugS8AvaLFmvgU24HdUQjZwVw8NlVsFm/Sz35tHaENe+eQgk9BMtaRLUwz0CzNjlpZNpw5b24IQ3vGTNWO5/tD8e7/RAN1UFVNUiTcnzVZxCQIX9HF3rCQjB6MRGeDBBnXMRZwMav6O57v0BMNZUq3X/2NsU0XZnWKR/r9tW0SS+4Vdfe7aW8aUm35DnL2XEtTs8JxGsQYBcFNlW+Na3CddSarhpzUzxUzQn7llHT2GG1FYAxbjh0jCTffshaghHDpvs0OZyZ4nRqQS+d0OZCQuyuK4pBYqOy3oFQzeUwM0KEJPLeZn26w4p9bVk412IRRAa5wEq0uqGR+VDf4+nyhsuCHkVNcTNwwFSnd5ucXOHvNBCSwPX/J0ASNy9UsMS1fU/2uS5FMLIgnAXg0783Icw5Tq7YcZDDx+DYme4i46o2wsmN9D7MiRKY5rlAoXse2iHU6jlZUiCw5fnkyOXqR6fuwVitXizRtOh7D43h9P2NZAYTgdAiAeH8eIEGzat2OuYwksukL2OxvdlOJtEoQl2u/bw+rwBJoIOuIesiH4uBiWgm7nk7YogFGY4xqW59BMXy2ykhJWcQcX9r9vf87aeDUs5SWHf1/Z2AiVZKXvHgKKwQhXdOM8I0DGltpxV9PFMLQqHFbsymRuMWf1GqrYAynyyEkZyOPjzFlAwQ5yiEYTM+fOe2sItfaPHWblqXBvZKXcFXwqAt53W9BC+vs1ALC9U5Iy5ONqrABO3+07FIjRjCbIsrXEHGBbjsX5kLWH6psx20r+me8cRVWV72gXKCbwahtP/axRIFkOhF5hqqrCbH3MzZlS93f4h+Ex802LtixH0aGZ6lkv4oEzdyMUaDKTIjKskaoy+vhiBpfEF/5I/tDyN6dmqO6ptyGsCxI3D3lWLAemj8tXIrXqtll29ThPqU8WUBVp1uMjZUl3WT9ERZJhVqwN9gFhBDwB5EuviMKPVAq4YrGyYA1xJbkw0LP3JzYOiUpZvKoTp1vHUdqSyPksn5GDEinG/GBaAes/rDhSA1eq+JNNcXCheyMSZb+KYQwapGl32KH6FxBsrvB3CRg8R/rqJVFIzhuo1oqUaaPx7bRruHN3R1ddVfg06+Eydryndf5TdI9g04DYzgAH9KNjcz7QfPAUMjfzVWFViJofe30IT2HgHSKT1llrLmgq09+HTvzv+MyH56Bgej8XHMl9vZ6h8DrZp163BUgDEtmYEqPnfHT3mjejzdOyfOMiBGnsLUaPDLMsphDvimdjdCziHHiusHz72Be6ngPzNw1k0c/SEwcn/+0aG7bW4h1T/ndWcrfp3npdcN3lbKRJoqYTGMOdmlUnZYM0z2+Jjj7TCNHciksDQLriuudhoZwbiEEUsLQ9gRwWIvKL4TOh0q+WoA6mdkXqdZA7fKG4I9DcB9iCCxnO7dJmS5zxZaB6A/XCk+acguaBXZDQdySMv3kl3lv+G7LLRgnlEmdjGgmjq6A20cb6bgvnER1eeaCFNylwbyfEY8jNsO2kmuiBzj+LZspYBKJENqaca2UkkFIj/h3ZYrVcWvReoCHEVqXTu3r6pfh3HQ6/PuVkTxrkTW+a3jgDyxm+RZaEZPeb7BCFLp5eW0LXacGzK/O+QZXwRNBhz4oJkV7TrfVCOvZGa9stiOcA/AqLFbIY</e:CipherValue>
+        </e:CipherData>
+      </e:EncryptedData>
+    </o:Security>
+  </s:Header>
+  <s:Body u:Id="_2">
+    <GetWeatherResponse xmlns="http://tempuri.org/">
+      <GetWeatherResult xmlns:a="http://schemas.datacontract.org/2004/07/WeatherChannel" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+        <a:Forcast>Cloudy</a:Forcast>
+        <a:Temperature>25</a:Temperature>
+      </GetWeatherResult>
+    </GetWeatherResponse>
+  </s:Body>
+</s:Envelope>
+
+Action.c(4): After saving response
+Action.c(4): Notify: Saving Parameter "GetWeather_101_Response = <GetWeather><GetWeatherResult><Forcast>Cloudy</Forcast><Temperature>25</Temperature></GetWeatherResult></GetWeather>"
+Action.c(4): Notify: Saving Parameter "response = <s:Envelope xmlns:s="http://www.w3.org/2003/05/soap-envelope" xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:u="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">\r\n  <s:Header />\r\n  <s:Body u:Id="_2">\r\n    <GetWeatherResponse xmlns="http://tempuri.org/">\r\n      <GetWeatherResult xmlns:a="http://schemas.datacontract.org/2004/07/WeatherChannel" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">\r\n        <a:Forcast>Cloudy</a:Forcast>\r\n        <a:Temperature>25</a:Temperature>\r\n      </GetWeatherResult>\r\n    </GetWeatherResponse>\r\n  </s:Body>\r\n</s:Envelope>"
+Action.c(4): Notify: Saving Parameter "Param_Forcast = Cloudy"
+Action.c(4): Notify: Saving Parameter "Param_Temperature = 25"
+Action.c(4): Web service call "GetWeather_101" was successful
+Ending action Action.
+Ending iteration 1.
+Ending Vuser...
+Starting action vuser_end.
+Ending action vuser_end.
+Vuser Terminated.

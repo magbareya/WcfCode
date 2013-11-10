@@ -1,0 +1,110 @@
+Virtual User Script started at : 12/18/2012 7:07:18 PM
+Starting action vuser_init.
+Web Services replay version 11.52.0 for Windows 7; Toolkit: ".Net"; build 3850
+Run-Time Settings file: "C:\Users\agbareya\Documents\VuGen\Scripts\WebServices1\\default.cfg"
+Vuser directory: "C:\Users\agbareya\Documents\VuGen\Scripts\WebServices1"
+Vuser output directory: "C:\Users\agbareya\Documents\VuGen\Scripts\WebServices1\"
+LOCAL start date/time:  2012-12-18 19:07:18
+Ending action vuser_init.
+Running Vuser...
+Starting iteration 1.
+Notify: max connections per server : 2
+Starting action Action.
+Action.c(3): Web service call "EchoString_101" started
+Action.c(3): Creating handler
+Action.c(3): Searching for wcf router
+Action.c(3): Preparing router
+Action.c(3): POST http://localhost:8731/Design_Time_Addresses/UsernameService/UsernamePasswordService/
+Action.c(3): SOAPAction: http://tempuri.org/IUsernamePasswordService/EchoString
+Action.c(3): Request Body:
+
+<?xml version="1.0" encoding="utf-16"?>
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/03/addressing">
+  <soap:Header>
+    <Action soap:mustUnderstand="1" xmlns="http://www.w3.org/2005/08/addressing">http://tempuri.org/IUsernamePasswordService/EchoString</Action>
+    <To soap:mustUnderstand="1" xmlns="http://www.w3.org/2005/08/addressing">http://localhost:8731/Design_Time_Addresses/UsernameService/UsernamePasswordService/</To>
+  </soap:Header>
+  <soap:Body>
+    <EchoString xmlns="http://tempuri.org/">
+      <s>abcde</s>
+    </EchoString>
+  </soap:Body>
+</soap:Envelope>
+
+
+Action.c(3): Sending request
+Action.c(3): Received response
+Action.c(3): Response Headers:
+
+Action.c(3): Content-Length:5170
+Action.c(3): Content-Type:application/soap+xml; charset=utf-8
+Action.c(3): Date:Tue, 18 Dec 2012 17:07:24 GMT
+Action.c(3): Server:Microsoft-HTTPAPI/2.0
+Action.c(3): 
+
+Action.c(3): Response Body:
+
+<?xml version="1.0" encoding="utf-16"?>
+<s:Envelope xmlns:s="http://www.w3.org/2003/05/soap-envelope" xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:u="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+  <s:Header>
+    <a:Action s:mustUnderstand="1" u:Id="_2">http://tempuri.org/IUsernamePasswordService/EchoStringResponse</a:Action>
+    <a:RelatesTo u:Id="_3">urn:uuid:1438f6e6-eacb-4727-99c9-443f11930cec</a:RelatesTo>
+    <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">
+      <u:Timestamp u:Id="uuid-b8c18b99-580c-4010-b5b9-72b1d91303bf-12">
+        <u:Created>2012-12-18T17:07:24.711Z</u:Created>
+        <u:Expires>2012-12-18T17:12:24.711Z</u:Expires>
+      </u:Timestamp>
+      <c:DerivedKeyToken u:Id="uuid-b8c18b99-580c-4010-b5b9-72b1d91303bf-8" xmlns:c="http://schemas.xmlsoap.org/ws/2005/02/sc">
+        <o:SecurityTokenReference>
+          <o:Reference URI="urn:uuid:5af964de-b305-408e-aebc-d0c823e2fcbf" ValueType="http://schemas.xmlsoap.org/ws/2005/02/sc/sct">
+          </o:Reference>
+        </o:SecurityTokenReference>
+        <c:Offset>0</c:Offset>
+        <c:Length>24</c:Length>
+        <c:Nonce>6Q5lM+4Ro21WfJHbtkW+Rg==</c:Nonce>
+      </c:DerivedKeyToken>
+      <c:DerivedKeyToken u:Id="uuid-b8c18b99-580c-4010-b5b9-72b1d91303bf-9" xmlns:c="http://schemas.xmlsoap.org/ws/2005/02/sc">
+        <o:SecurityTokenReference>
+          <o:Reference URI="urn:uuid:5af964de-b305-408e-aebc-d0c823e2fcbf" ValueType="http://schemas.xmlsoap.org/ws/2005/02/sc/sct">
+          </o:Reference>
+        </o:SecurityTokenReference>
+        <c:Nonce>ClOffNNhzI17RSJizBUzOQ==</c:Nonce>
+      </c:DerivedKeyToken>
+      <e:ReferenceList xmlns:e="http://www.w3.org/2001/04/xmlenc#">
+        <e:DataReference URI="#_1">
+        </e:DataReference>
+        <e:DataReference URI="#_4">
+        </e:DataReference>
+      </e:ReferenceList>
+      <e:EncryptedData Id="_4" Type="http://www.w3.org/2001/04/xmlenc#Element" xmlns:e="http://www.w3.org/2001/04/xmlenc#">
+        <e:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes256-cbc">
+        </e:EncryptionMethod>
+        <KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+          <o:SecurityTokenReference>
+            <o:Reference ValueType="http://schemas.xmlsoap.org/ws/2005/02/sc/dk" URI="#uuid-b8c18b99-580c-4010-b5b9-72b1d91303bf-9">
+            </o:Reference>
+          </o:SecurityTokenReference>
+        </KeyInfo>
+        <e:CipherData>
+          <e:CipherValue>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</e:CipherValue>
+        </e:CipherData>
+      </e:EncryptedData>
+    </o:Security>
+  </s:Header>
+  <s:Body u:Id="_0">
+    <EchoStringResponse xmlns="http://tempuri.org/">
+      <EchoStringResult>You entered: abcde !!!</EchoStringResult>
+    </EchoStringResponse>
+  </s:Body>
+</s:Envelope>
+
+Action.c(3): After saving response
+Action.c(3): Notify: Saving Parameter "EchoString_101_Response = <EchoString><EchoStringResult>You entered: abcde !!!</EchoStringResult></EchoString>".
+Action.c(3): Notify: Saving Parameter "response = <s:Envelope xmlns:s="http://www.w3.org/2003/05/soap-envelope" xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:u="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">\r\n  <s:Header />\r\n  <s:Body u:Id="_0">\r\n    <EchoStringResponse xmlns="http://tempuri.org/">\r\n      <EchoStringResult>You entered: abcde !!!</EchoStringResult>\r\n    </EchoStringResponse>\r\n  </s:Body>\r\n</s:Envelope>".
+Action.c(3): Web service call "EchoString_101" was successful
+Ending action Action.
+Ending iteration 1.
+Ending Vuser...
+Starting action vuser_end.
+Ending action vuser_end.
+Vuser Terminated.

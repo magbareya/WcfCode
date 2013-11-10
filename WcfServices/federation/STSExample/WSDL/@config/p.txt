@@ -1,0 +1,66 @@
+
+<protocols scenario="customBinding" uiType="WSFederationBinding" xmlns="http://hp/ServiceTest/config">
+  <mode>Private</mode>
+  <customization>
+    <textMessageEncoding />
+    <security authenticationMode="SecureConversation" protectionLevel="Sign">
+      <secureConversationBootstrap authenticationMode="IssuedTokenForCertificate">
+        <issuedTokenParameters protectionLevel="Sign" tokenType="http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLV1.1">
+          <issuer address="http://localhost/WCFSecurityTokenService/Service.svc" protocolsScenarioName="Service1" />
+        </issuedTokenParameters>
+      </secureConversationBootstrap>
+    </security>
+    <httpTransport />
+  </customization>
+  <identities>
+    <server>
+      <certificate>
+        <windowsStore>
+          <storeLocation>LocalMachine</storeLocation>
+          <storeName>My</storeName>
+          <X509FindType>FindBySubjectDistinguishedName</X509FindType>
+          <X509FindValue>CN=WCFQuickStartServer</X509FindValue>
+        </windowsStore>
+      </certificate>
+      <expectedDns>WCFQuickStartServer</expectedDns>
+      <scopedCertificates>
+        <add targetUri="http://localhost/WCFSecurityTokenService/Service.svc">
+          <certificate xmlns="http://hp/ServiceTest/config">
+            <windowsStore>
+          <storeLocation>LocalMachine</storeLocation>
+          <storeName>My</storeName>
+          <X509FindType>FindBySubjectDistinguishedName</X509FindType>
+          <X509FindValue>CN=WCFQuickStartServer</X509FindValue>
+        </windowsStore>
+          </certificate>
+        </add>
+      </scopedCertificates>
+    </server>
+<client>
+          <certificate>
+            <windowsStore>
+            <storeLocation>LocalMachine</storeLocation>
+            <storeName>My</storeName>
+            <X509FindType>FindBySubjectDistinguishedName</X509FindType>
+            <X509FindValue>CN=WCFQuickStartClient</X509FindValue>
+        </windowsStore>
+          </certificate>
+        </client>
+  </identities>
+  <referencedConfigurations>
+    <protocols scenario="customBinding" uiType="customBinding" xmlns="http://hp/ServiceTest/config">
+      <mode>Private</mode>
+      <customization>
+        <textMessageEncoding />
+        <security messageProtectionOrder="SignBeforeEncrypt" requireSignatureConfirmation="false"  authenticationMode="MutualCertificate" />
+        <httpTransport />
+      </customization>
+      <identities>
+        <server>
+          <expectedDns>WCFQuickStartServer</expectedDns>
+        </server>        
+      </identities>
+    </protocols>
+    <filePath>C:\Documents and Settings\ltqa\Desktop\mutual_yaron.stss</filePath>
+  </referencedConfigurations>
+</protocols>

@@ -1,0 +1,2 @@
+<?xml version="1.0"?>
+<Services><Service name="BookStoreService"><Port name="WSHttpBinding_IBrowseBooks"><Operation>BrowseBooks</Operation></Port></Service><Service name="BookStoreService1"><Port name="WSFederationHttpBinding_IBuyBook"><Operation>BuyBook</Operation></Port></Service></Services>

@@ -1,0 +1,103 @@
+Virtual User Script started
+Starting action vuser_init.
+Web Services replay version 9.50.0 for WIN2003; Toolkit: ".Net"; build 4120
+Run-Time Settings file: "C:\yossin\FederationScopedCert\FederationScopedCert\\default.cfg"
+Vuser directory: "C:\yossin\FederationScopedCert\FederationScopedCert"
+Vuser output directory: "C:\yossin\FederationScopedCert\FederationScopedCert\"
+LOCAL start date/time:  2008-11-24 15:51:13
+Ending action vuser_init.
+Running Vuser...
+Starting iteration 1.
+Starting action Action.
+Action.c(4): Web service call "Add_101" started
+Action.c(4): Creating handler
+Action.c(4): Searching for wcf router
+Action.c(4): Preparing router
+Action.c(4): POST http://YNEEMAN01.emea.hpqcorp.net/FederationScopedCert/CalcFedService/Service1.svc
+Action.c(4): SOAPAction: http://Neeman.Samples/ICalculator/Add
+Action.c(4): Request Body:
+
+<?xml version="1.0" encoding="utf-16"?>
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/03/addressing">
+  <soap:Header>
+    <Action soap:mustUnderstand="1" xmlns="http://www.w3.org/2005/08/addressing">http://Neeman.Samples/ICalculator/Add</Action>
+    <To soap:mustUnderstand="1" xmlns="http://www.w3.org/2005/08/addressing">http://yneeman01.emea.hpqcorp.net/FederationScopedCert/CalcFedService/Service1.svc</To>
+  </soap:Header>
+  <soap:Body>
+    <Add xmlns="http://Neeman.Samples">
+      <n1>12</n1>
+      <n2>21</n2>
+    </Add>
+  </soap:Body>
+</soap:Envelope>
+
+
+Action.c(4): Sending request
+Action.c(4): Received response
+Action.c(4): Response Body:
+
+<?xml version="1.0" encoding="utf-16"?>
+<s:Envelope xmlns:s="http://www.w3.org/2003/05/soap-envelope" xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:u="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+  <s:Header>
+    <a:Action s:mustUnderstand="1" u:Id="_2">http://Neeman.Samples/ICalculator/AddResponse</a:Action>
+    <ActivityId CorrelationId="431b5a52-8012-44cb-bfb4-1b55d155543f" xmlns="http://schemas.microsoft.com/2004/09/ServiceModel/Diagnostics">27c5ac5b-8fbb-40ab-88c2-1623c0b571b1</ActivityId>
+    <a:RelatesTo u:Id="_3">urn:uuid:4ce84d20-56a2-4a75-b061-3d1d8efbdcd5</a:RelatesTo>
+    <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">
+      <u:Timestamp u:Id="uuid-9d5b7b34-8605-427e-9048-ee973f9519f3-27">
+        <u:Created>2008-11-24T13:50:40.078Z</u:Created>
+        <u:Expires>2008-11-24T13:55:40.078Z</u:Expires>
+      </u:Timestamp>
+      <c:DerivedKeyToken u:Id="uuid-9d5b7b34-8605-427e-9048-ee973f9519f3-23" xmlns:c="http://schemas.xmlsoap.org/ws/2005/02/sc">
+        <o:SecurityTokenReference>
+          <o:Reference URI="urn:uuid:a8079ae2-89cc-417b-a7aa-30a9e9d99c6a" ValueType="http://schemas.xmlsoap.org/ws/2005/02/sc/sct">
+          </o:Reference>
+        </o:SecurityTokenReference>
+        <c:Offset>0</c:Offset>
+        <c:Length>24</c:Length>
+        <c:Nonce>ERP8gp0qMbnflHfh0BQZVg==</c:Nonce>
+      </c:DerivedKeyToken>
+      <c:DerivedKeyToken u:Id="uuid-9d5b7b34-8605-427e-9048-ee973f9519f3-24" xmlns:c="http://schemas.xmlsoap.org/ws/2005/02/sc">
+        <o:SecurityTokenReference>
+          <o:Reference URI="urn:uuid:a8079ae2-89cc-417b-a7aa-30a9e9d99c6a" ValueType="http://schemas.xmlsoap.org/ws/2005/02/sc/sct">
+          </o:Reference>
+        </o:SecurityTokenReference>
+        <c:Nonce>dHDeoLgegpjWFs/LvGnkqQ==</c:Nonce>
+      </c:DerivedKeyToken>
+      <e:ReferenceList xmlns:e="http://www.w3.org/2001/04/xmlenc#">
+        <e:DataReference URI="#_1">
+        </e:DataReference>
+        <e:DataReference URI="#_4">
+        </e:DataReference>
+      </e:ReferenceList>
+      <e:EncryptedData Id="_4" Type="http://www.w3.org/2001/04/xmlenc#Element" xmlns:e="http://www.w3.org/2001/04/xmlenc#">
+        <e:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes256-cbc">
+        </e:EncryptionMethod>
+        <KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#">
+          <o:SecurityTokenReference>
+            <o:Reference ValueType="http://schemas.xmlsoap.org/ws/2005/02/sc/dk" URI="#uuid-9d5b7b34-8605-427e-9048-ee973f9519f3-24">
+            </o:Reference>
+          </o:SecurityTokenReference>
+        </KeyInfo>
+        <e:CipherData>
+          <e:CipherValue>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</e:CipherValue>
+        </e:CipherData>
+      </e:EncryptedData>
+    </o:Security>
+  </s:Header>
+  <s:Body u:Id="_0">
+    <AddResponse xmlns="http://Neeman.Samples">
+      <AddResult>33</AddResult>
+    </AddResponse>
+  </s:Body>
+</s:Envelope>
+
+Action.c(4): After saving response
+Action.c(4): Notify: Saving Parameter "AddAllArgsParam = <Add><AddResult>33</AddResult><AddResultSpecified>True</AddResultSpecified></Add>"
+Action.c(4): Notify: Saving Parameter "response = <s:Envelope xmlns:s="http://www.w3.org/2003/05/soap-envelope" xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:u="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">\r\n  <s:Header />\r\n  <s:Body u:Id="_0">\r\n    <AddResponse xmlns="http://Neeman.Samples">\r\n      <AddResult>33</AddResult>\r\n    </AddResponse>\r\n  </s:Body>\r\n</s:Envelope>"
+Action.c(4): Web service call "Add_101" was successful
+Ending action Action.
+Ending iteration 1.
+Ending Vuser...
+Starting action vuser_end.
+Ending action vuser_end.
+Vuser Terminated.

@@ -1,0 +1,9 @@
+-+
+-DCCI
+-D_IDA_XL
+-DWINNT
+-IC:\examples\ST usage\st_wcf\scripts\federation\WCFCalcFederation
+-IC:\Program Files\HP\Service Test\include
+-ec:\examples\st usage\st_wcf\scripts\federation\wcfcalcfederation\\logfile.log
+c:\examples\st usage\st_wcf\scripts\federation\wcfcalcfederation\\combined_WCFCalcFederation.c
+c:\examples\st usage\st_wcf\scripts\federation\wcfcalcfederation\\pre_cci.c

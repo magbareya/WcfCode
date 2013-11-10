@@ -1,0 +1,12 @@
+<?xml-stylesheet href="..\web_service_call.xsl" type="text/xsl"?>
+<report vuGenInstallDir="C:\Program Files\HP\LoadRunner">
+  <web_service_call>
+    <service name="HelloWorldService" />
+    <port name="WSFederationHttpBinding_IHelloWorld" />
+    <operation name="helloWorld" />
+    <wsdl location="http://naveh05.emea.hpqcorp.net/WcfSampleService/Service.svc?wsdl" />
+    <address url="http://localhost/WCFSampleService/service.svc" />
+    <toolkit name=".Net" />
+    <aspect name="Positive Testing" />
+  </web_service_call>
+</report>

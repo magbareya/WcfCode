@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="982ad55c-e53e-4b3e-ac4e-e27bef94f24b" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8000/samples/HelloWorld/mex" Protocol="mex" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="samples.wsdl" MetadataType="Wsdl" ID="13cee54e-0304-4121-8896-7e11eab63ec2" SourceId="1" SourceUrl="http://localhost:8000/samples/HelloWorld/mex" />
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="2867244f-0e57-470a-a90e-b805f9574dd7" SourceId="1" SourceUrl="http://localhost:8000/samples/HelloWorld/mex" />
+    <MetadataFile FileName="samples.xsd" MetadataType="Schema" ID="d34f784f-9683-4fd1-8ca9-a6b415a8f852" SourceId="1" SourceUrl="http://localhost:8000/samples/HelloWorld/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="f6b38ab4-3943-4f5f-80fa-bf1d79d0fff4" SourceId="1" SourceUrl="http://localhost:8000/samples/HelloWorld/mex" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,0 +1,9 @@
+-+
+-DCCI
+-D_IDA_XL
+-DWINNT
+-I\\naveh05\PC COE (C)\examples\ST usage\st_wcf\scripts\federation\IssuedTokenMultiSTS_scopedCert
+-IC:\Program Files\HP\LoadRunner\include
+-e\\naveh05\pc coe (c)\examples\st usage\st_wcf\scripts\federation\issuedtokenmultists_scopedcert\\logfile.log
+\\naveh05\pc coe (c)\examples\st usage\st_wcf\scripts\federation\issuedtokenmultists_scopedcert\\combined_IssuedTokenMultiSTS_scopedCert.c
+\\naveh05\pc coe (c)\examples\st usage\st_wcf\scripts\federation\issuedtokenmultists_scopedcert\\pre_cci.c

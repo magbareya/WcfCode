@@ -1,0 +1,103 @@
+<protocols scenario="customBinding" uiType="WSFederationBinding" xmlns="http://hp/ServiceTest/config">
+  <mode>Private</mode>
+  <customization>
+    <textMessageEncoding />
+
+<security authenticationMode="SecureConversation">
+      <secureConversationBootstrap authenticationMode="IssuedTokenForCertificate">
+  <issuedTokenParameters tokenType="http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLV1.1">
+        <issuer address="http://localhost:9092/STSService/certificate" protocolsScenarioName="ForacstS" />
+      </issuedTokenParameters>
+</secureConversationBootstrap>
+    </security>
+       
+    <httpTransport />
+  </customization>
+  <identities>
+<client>
+      <certificate>
+        <windowsStore>
+          <storeLocation>CurrentUser</storeLocation>
+          <storeName>My</storeName>
+          <X509FindType>FindBySubjectDistinguishedName</X509FindType>
+          <X509FindValue>CN=WSE2QuickStartClient</X509FindValue>
+        </windowsStore>
+      </certificate>
+    </client>
+    <server>
+ <expectedDns>MyService</expectedDns>
+<scopedCertificates>
+                  <add targetUri="http://localhost:9091/STSHome/certificate">
+			<certificate>
+				<windowsStore>
+					<storeLocation>LocalMachine</storeLocation>
+					<storeName>My</storeName>
+					<X509FindType>FindBySubjectDistinguishedName</X509FindType>
+					<X509FindValue>CN=MyHomeSTS</X509FindValue>
+				</windowsStore>
+			</certificate>
+		</add>
+<add targetUri="http://localhost:9092/STSService/certificate">
+			<certificate>
+				<windowsStore>
+					<storeLocation>LocalMachine</storeLocation>
+					<storeName>My</storeName>
+					<X509FindType>FindBySubjectDistinguishedName</X509FindType>
+					<X509FindValue>CN=MyServiceSTS</X509FindValue>
+				</windowsStore>
+			</certificate>
+		</add>
+<add targetUri="http://localhost:9090/service/certificate">
+			<certificate>
+				<windowsStore>
+					<storeLocation>LocalMachine</storeLocation>
+					<storeName>My</storeName>
+					<X509FindType>FindBySubjectDistinguishedName</X509FindType>
+					<X509FindValue>CN=MyService</X509FindValue>
+				</windowsStore>
+			</certificate>
+		</add>
+	</scopedCertificates>
+
+</server>
+  </identities>
+  <referencedConfigurations>
+    <protocols scenario="customBinding" uiType="WSFederationBinding" xmlns="http://hp/ServiceTest/config">
+      <mode>Private</mode>
+      <customization>
+        <textMessageEncoding />
+
+        <security authenticationMode="SecureConversation">
+      <secureConversationBootstrap authenticationMode="IssuedTokenForCertificate">
+          <issuedTokenParameters tokenType="http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLV1.1">
+            <issuer address="http://localhost:9091/STSHome/certificate" protocolsScenarioName="ServiceSTS" />
+          </issuedTokenParameters>
+</secureConversationBootstrap>
+        </security>
+        <httpTransport />
+      </customization>
+      <identities>
+    <server>
+      <expectedDns>MyServiceSTS</expectedDns>
+    </server>
+    
+  </identities>
+      <referencedConfigurations>
+        <protocols scenario="wsMutualCertificates" uiType="wsHttpBindingCertificate" xmlns="http://hp/ServiceTest/config">
+  <mode>Private</mode>
+  <customization>
+    <security negotiateServiceCredential="False" />
+  </customization>
+  <identities>
+    <server>
+      <expectedDns>MyHomeSTS</expectedDns>
+    </server>
+    
+  </identities>
+</protocols>
+        <filePath>C:\Documents and Settings\naveh\Local Settings\Temp\noname483\WSDL\@config\HomeSTS.stss</filePath>
+      </referencedConfigurations>
+    </protocols>
+    <filePath>C:\Documents and Settings\naveh\Local Settings\Temp\noname483\WSDL\@config\ServiceSTS.stss</filePath>
+  </referencedConfigurations>
+</protocols>

@@ -1,0 +1,9 @@
+-+
+-DCCI
+-D_IDA_XL
+-DWINNT
+-I\\naveh05\PC COE (C)\examples\ST usage\st_wcf\scripts\federation\STSExample
+-IC:\Program Files\HP\LoadRunner\include
+-e\\naveh05\pc coe (c)\examples\st usage\st_wcf\scripts\federation\stsexample\\logfile.log
+\\naveh05\pc coe (c)\examples\st usage\st_wcf\scripts\federation\stsexample\\combined_STSExample.c
+\\naveh05\pc coe (c)\examples\st usage\st_wcf\scripts\federation\stsexample\\pre_cci.c
